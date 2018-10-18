@@ -196,12 +196,20 @@ def gradient_boosting_crossval(data, labels, num_splits, scoring='accuracy'):
     gbc = GradientBoostingClassifier(random_state=0)
     return fit_model(gbc, data, labels, num_splits, scoring)
 
+"""
+Args:
+    data (dataframe): contains all data that will be used to fit the model
+    labels (list of strings): corresponding labels for each row of data
+    num_splits (int): number of train-test splits to test
+    scoring (string, optional): scoring method. Defaults to accuracy score
 
+Returns:
+    Multi Layer Perceptron model fitted on all inputted data
+    Prints mean cross-validation score and 95% confidence interval
+"""
 def mlp_crossval(data, labels, num_splits, scoring='accuracy'):
     mlp = MLPClassifier(hidden_layer_sizes=(30,30,30,30), random_state=0)
-    print('MLP is created')
     return fit_model(mlp, data, labels, num_splits, scoring)
-    print('MLP is done')
 
 """
 Use a classification model to make label predictions on test data set
