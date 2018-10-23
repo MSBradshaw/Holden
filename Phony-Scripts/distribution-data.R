@@ -16,15 +16,24 @@ cna <- as.tibble(t(cna))
 
 colnames(cna) <- names
 
-#
+#plot the dist of the real data
 plot <- ggplot(cna, aes(x=OR4F5)) + geom_density()
 plot
 
 cna_clone <- cna
 
+#plot the fake data
 cna_clone$fakeOR4F5 <- sample(unlist(cna$OR4F5),50)
 
 plot <- ggplot(cna, aes(x=fakeOR4F5)) + geom_density()
+plot
+
+#plot the fake random data
+man_val <- max(as.numeric(unlist(cna$OR4F5)))
+min_val <- min(as.numeric(unlist(cna$OR4F5)))
+cna_clone$randOR4F5 <- runif(80, man_val, min_val)
+
+plot <- ggplot(cna, aes(x=randOR4F5)) + geom_density()
 plot
 
 #function take from: https://rdrr.io/cran/stackoverflow/src/R/chunk2.R
