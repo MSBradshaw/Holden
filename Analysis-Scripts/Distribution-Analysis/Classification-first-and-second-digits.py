@@ -112,7 +112,9 @@ print(2)
 labels = df['labels']
 df = df.drop(columns=['labels'])
 
-df = second_digit_after_decimal(df)
+first_df = first_digit_after_decimal(df)
+second_df = second_digit_after_decimal(df)
+df = pd.merge(first_df, second_df, left_index=True, right_index=True)
 print(3)
 # impute the NA with 0
 df = df.fillna(0)
