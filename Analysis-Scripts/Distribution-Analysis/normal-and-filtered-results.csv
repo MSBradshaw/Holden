@@ -1,0 +1,15 @@
+algorithm,dataset,score
+LR,normal,0.49
+RF,normal,0.97
+SVC,normal,0.47
+GB,normal,0.94
+NB,normal,0.95
+KNN,normal,0.92
+MLP,normal,0.81
+LR,filtered,0.698113208
+RF,filtered,1
+SVC,filtered,1
+GB,filtered,0.943396226
+NB,filtered,0.962264151
+KNN,filtered,1
+MLP,filtered,1

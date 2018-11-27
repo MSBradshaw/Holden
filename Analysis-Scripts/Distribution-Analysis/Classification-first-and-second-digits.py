@@ -111,17 +111,19 @@ def second_digit_after_decimal(data):
 print(2)
 labels = df['labels']
 df = df.drop(columns=['labels'])
-
+labels_test = df_test['labels']
 first_df = first_digit_after_decimal(df)
 second_df = second_digit_after_decimal(df)
+
+first_df_test = first_digit_after_decimal(df_test)
+second_df_test = second_digit_after_decimal(df_test)
+
 df = pd.merge(first_df, second_df, left_index=True, right_index=True)
+df_test = pd.merge(first_df_test, second_df_test, left_index=True, right_index=True)
 print(3)
 # impute the NA with 0
 df = df.fillna(0)
 
-# now do the same for the test data
-labels_test = df_test['labels']
-df_test = df_test.drop(columns=['labels'])
 
 # impute the NA with 0
 df_test = df_test.fillna(0)
@@ -172,3 +174,39 @@ start = time.time()
 mlp = cu.mlp_crossval(df, labels, NUM_SPLITS)
 end = time.time()
 print("Runtime:", (end - start)/60, "minutes")
+
+### This is commented out so that you do not call predictinos until you are done finalizing the training sets!!!
+### DO NOT RUN MORE THAN ONCE! THAT IS CHEATING MYREE!
+lr_pred = lr.predict(df_test)
+lr_result = lr.score(df_test, labels_test)
+
+rf_pred = rf.predict(df_test)
+rf_result = rf.score(df_test, labels_test)
+
+svc_pred = svc.predict(df_test)
+svc_result = svc.score(df_test, labels_test)
+
+gbc_pred = gbc.predict(df_test)
+gbc_result = gbc.score(df_test, labels_test)
+
+gnb_pred = gnb.predict(df_test)
+gnb_result = gnb.score(df_test, labels_test)
+
+knn_pred = knn.predict(df_test)
+knn_result = knn.score(df_test, labels_test)
+
+mlp_pred = mlp.predict(df_test)
+mlp_result = mlp.score(df_test, labels_test)
+
+print(lr_result)
+#print(mnb_result)
+print(rf_result)
+print(svc_result)
+print(gbc_result)
+print(gnb_result)
+print(knn_result)
+print(mlp_result)
+results = [lr_result,rf_result,svc_result,gbc_result,gnb_result,knn_result,mlp_result]
+learners = ['Logistic Regression','Random Forest','SVC','GBC','Naive Bayes','KNN','MLP']
+final = pd.DataFrame({'score':results,'learner':learners})
+final.head()
