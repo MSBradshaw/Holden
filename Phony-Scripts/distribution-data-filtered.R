@@ -71,22 +71,38 @@ cna_numerical['labels'] <- NULL
 cna_numerical[is.na(cna_numerical)] <- 0
 cna_pca <- prcomp(cna_numerical)
 cna_pca['labels'] <- cna$labels
-pca_tibble <- tibble(pc1=cna_pca$x[,1],pc2=cna_pca$x[,2],labels=cna$labels)
+pca_tibble <- tibble(pc1=cna_pca$x[,1],pc2=cna_pca$x[,2],pc3=cna_pca$x[,3],pc4=cna_pca$x[,4],pc5=cna_pca$x[,5],pc6=cna_pca$x[,6],labels=cna$labels)
 
 #PCA plot
 plot <- ggplot(pca_tibble,aes(x=pc1,y=pc2,colour=labels)) + geom_point() +
-  ggtitle('PCA Real & Fake Data') + 
+  ggtitle('PCA Real & Fake Distribution Data') + 
   xlab(paste('PC1',summary(cna_pca)$importance[2,1])) +
   ylab(paste('PC2',summary(cna_pca)$importance[2,2])) 
 plot
+ggsave('Analysis-Scripts/Distribution-Analysis/pca-normal.png',plot)
 
 #remove the real points that differ greatly from the fake
 pca_filtered <- pca_tibble[(pca_tibble$pc2 > 0 & pca_tibble$pc1 < 10),]
 plot <- ggplot(pca_filtered,aes(x=pc1,y=pc2,colour=labels)) + geom_point() +
-  ggtitle('PCA Real & Fake Data') + 
+  ggtitle('PCA Real & Fake Distribution Data') + 
   xlab(paste('PC1',summary(cna_pca)$importance[2,1])) +
   ylab(paste('PC2',summary(cna_pca)$importance[2,2]))
 plot
+ggsave('Analysis-Scripts/Distribution-Analysis/pca-filtered.png',plot)
+
+plot <- ggplot(pca_filtered,aes(x=pc3,y=pc4,colour=labels)) + geom_point() +
+  ggtitle('PCA Real & Fake Distribution Data') + 
+  xlab(paste('PC1',summary(cna_pca)$importance[2,3])) +
+  ylab(paste('PC2',summary(cna_pca)$importance[2,4]))
+plot
+
+plot <- ggplot(pca_filtered,aes(x=pc5,y=pc6,colour=labels)) + geom_point() +
+  ggtitle('PCA Real & Fake Distribution Data') + 
+  xlab(paste('PC1',summary(cna_pca)$importance[2,5])) +
+  ylab(paste('PC2',summary(cna_pca)$importance[2,6]))
+plot
+
+
 
 cna_filtered <- cna[(pca_tibble$pc2 > 0 & pca_tibble$pc1 < 10),]
 real_filtered <- cna_filtered[cna_filtered$labels=='real',]

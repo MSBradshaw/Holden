@@ -8,7 +8,12 @@ set.seed(0)
 
 setwd('C:/Users/Michael/Documents/Holden/')
 
+source('DreamAI/R/DreamAI_bagging.R')
 source('DreamAI/R/main.R')
+source('DreamAI/R/baseline_imputation_functions.R')
+source('DreamAI/R/RegImputed.R')
+source('DreamAI/R/SpectroFM.R')
+source('DreamAI/R/wrapper.R')
 
 #i <- iris
 #t <- unlist(as.numeric(i[1,]))

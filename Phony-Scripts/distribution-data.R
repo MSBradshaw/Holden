@@ -6,6 +6,7 @@ set.seed(0)
 
 setwd('C:/Users/Michael/Documents/Holden/')
 cna <- read_tsv('Data/Data-Uncompressed-Original/CNA.cct')
+cna <- read_tsv('Data/Data-Uncompressed-Original/CNA.cct')
 
 #get the protein names
 names <- unlist(cna['idx'])
@@ -102,5 +103,19 @@ write_csv(train,'Data/Distribution-Data-Set/train_cna_distribution.csv')
 write_csv(test,'Data/Distribution-Data-Set/test_cna_distribution.csv')
 
 
+#make a PCA plot of the combind data
+combind <- test
+combind[(nrow(combind)+1):(nrow(combind)+nrow(train)),] <- train
+combind[is.na(combind)] <- 0
+pca <- prcomp(combind[,(1:ncol(combind)-1)])
+summary_pca <- summary(pca)
+pca_tibble <- tibble('pc1'=pca$x[,1],'pc2'=pca$x[,2],'label'=combind$labels)
+plot <- ggplot(data = pca_tibble, aes(x=pc1,y=pc2,colour=label)) +
+  geom_point() +
+  ggtitle('PCA Resampling CNA') +
+  xlab(paste('PC1',summary_pca$importance[2,1]) ) +
+  ylab(paste('PC2',summary_pca$importance[2,2]) )
+plot
+ggsave('Analysis-Scripts/Distribution-Analysis/pca-resampling-cna.png',plot)
 
 
