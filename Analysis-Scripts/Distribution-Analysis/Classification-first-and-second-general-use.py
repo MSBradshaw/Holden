@@ -148,10 +148,10 @@ end = time.time()
 print("Runtime:", (end - start)/60, "minutes")
 
 print('LR')
-start = time.time()
-lr = cu.logistic_regression_model_crossval(df, labels, NUM_SPLITS)
-end = time.time()
-print("Runtime:", (end - start)/60, "minutes")
+#start = time.time()
+#lr = cu.logistic_regression_model_crossval(df, labels, NUM_SPLITS)
+#end = time.time()
+#print("Runtime:", (end - start)/60, "minutes")
 
 print('MLP')
 start = time.time()
@@ -161,8 +161,8 @@ print("Runtime:", (end - start)/60, "minutes")
 
 ### This is commented out so that you do not call predictinos until you are done finalizing the training sets!!!
 ### DO NOT RUN MORE THAN ONCE! THAT IS CHEATING MYREE!
-lr_pred = lr.predict(df_test)
-lr_result = lr.score(df_test, labels_test)
+#lr_pred = lr.predict(df_test)
+#lr_result = lr.score(df_test, labels_test)
 
 rf_pred = rf.predict(df_test)
 rf_result = rf.score(df_test, labels_test)
@@ -182,7 +182,7 @@ knn_result = knn.score(df_test, labels_test)
 mlp_pred = mlp.predict(df_test)
 mlp_result = mlp.score(df_test, labels_test)
 
-print(lr_result)
+#print(lr_result)
 #print(mnb_result)
 print(rf_result)
 print(svc_result)
@@ -190,8 +190,8 @@ print(gbc_result)
 print(gnb_result)
 print(knn_result)
 print(mlp_result)
-results = [lr_result,rf_result,svc_result,gbc_result,gnb_result,knn_result,mlp_result]
-learners = ['Logistic Regression','Random Forest','SVC','GBC','Naive Bayes','KNN','MLP']
+results = [rf_result,svc_result,gbc_result,gnb_result,knn_result,mlp_result]
+learners = ['Random Forest','SVC','GBC','Naive Bayes','KNN','MLP']
 final = pd.DataFrame({'score':results,'learner':learners})
 final.head()
 final.to_csv(sys.argv[3])
