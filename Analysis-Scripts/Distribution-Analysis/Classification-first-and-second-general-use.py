@@ -1,10 +1,8 @@
 import Classification_Utils as cu
 import pandas as pd
-import benford as bf
 import time
 import numpy as np
 import re
-from ggplot import *
 import sys
 
 sys.argv[1]
@@ -14,27 +12,6 @@ sys.argv[2]
 print(1)
 df = pd.read_csv(sys.argv[1])
 df_test = pd.read_csv(sys.argv[2])
-
-# a function for adding doing doing the Benford analysis and added the digit distribution as features
-
-def add_benford_features(data):
-    """
-    data: a Pandas DataFrame
-    does an analysis of the digit frequencies of the provided data
-    adds the relative abundance of each digit to the far right of the input data
-    returns: Pandas DataFrame, same as the input but with 9 new columns containing digit occurrence frequencies percentages
-    """
-    print('benford-ing')
-    ben_data = pd.DataFrame(columns=range(0, len(data.index)))
-    for i in range(0,len(data.index)):
-        row = data.iloc[i,0:-1].values.tolist()
-        # first_digits = bf.first_digits(row, digs=1, decimals=8, show_plot=False, inform=False)
-        first_digits = bf.second_digit(row, show_plot=False, inform=False)
-        ben_data[i] = first_digits['Found'].tolist()
-    ben_data = ben_data.T
-    ben_data.columns = [ 'digit_0','digit_1', 'digit_2', 'digit_3', 'digit_4', 'digit_5', 'digit_6', 'digit_7', 'digit_8', 'digit_9']
-    return data.join(ben_data,how='outer')
-
 
 def first_digit_after_decimal(data):
     original = data.copy()
@@ -217,6 +194,6 @@ results = [lr_result,rf_result,svc_result,gbc_result,gnb_result,knn_result,mlp_r
 learners = ['Logistic Regression','Random Forest','SVC','GBC','Naive Bayes','KNN','MLP']
 final = pd.DataFrame({'score':results,'learner':learners})
 final.head()
-
-plot = ggplot(aes(x='learner', weight='score'), data=final) + geom_bar() + ggtitle('Resampling Test Transcriptomics Accuracy') + xlab('Model') + ylab('Accuracy')
-plot.save(sys.argv[3])
+final.to_csv(sys.argv[3])
+#plot = ggplot(aes(x='learner', weight='score'), data=final) + geom_bar() + ggtitle('Resampling Test Transcriptomics Accuracy') + xlab('Model') + ylab('Accuracy')
+#plot.save(sys.argv[3])
