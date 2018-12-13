@@ -73,14 +73,12 @@ make_fake_data <- function(data,train_file_name,test_file_name,plot_file_name,se
   #combind the real and fake data into the train and test sets
   train <- rbind(real_train,phony_train)
   test <- rbind(real_test,phony_test)
-  
   #give column names to the train and test
   colnames(train) <- names
   colnames(test) <- names
   
   #write train and test sets as csv
   write_csv(train,train_file_name)
-  print(train_file_name)
   write_csv(test,test_file_name)
   
   #make a PCA plot of the combind data
@@ -103,10 +101,8 @@ setwd('C:/Users/Michael/Documents/Holden/')
 inputdata <- read_tsv('Data/Data-Uncompressed-Original/transcriptomics.cct')
 for(i in seq(1,100)){
   train_name <- paste('Data/Distribution-Data-Set/train_transcriptomics_distribution',i,'.csv',sep='')
-  print(train_name)
-  print('--------')
   test_name <- paste('Data/Distribution-Data-Set/test_transcriptomics_distribution',i,'.csv',sep='')
   plot_name <- paste('Analysis-Scripts/Distribution-Analysis/pca-resampling-transcriptomics',i,'.png',sep='')
-  make_fake_data(inputdata,train_name,test_name,plot_name,1)
+  make_fake_data(inputdata,train_name,test_name,plot_name,i)
   print(i)
 }
