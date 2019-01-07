@@ -118,8 +118,8 @@ for(i in seq(1,100)){
 
 inputdata <- read_tsv('Data/Data-Uncompressed-Original/proteomics.cct')
 for(i in seq(1,100)){
-  train_name <- paste('Data/Distribution-Data-Set/Proteomics-100/train_transcriptomics_distribution',i,'.csv',sep='')
-  test_name <- paste('Data/Distribution-Data-Set/Proteomics-100/test_transcriptomics_distribution',i,'.csv',sep='')
+  train_name <- paste('Data/Distribution-Data-Set/Proteomics-100/train_proteomics_distribution',i,'.csv',sep='')
+  test_name <- paste('Data/Distribution-Data-Set/Proteomics-100/test_proteomics_distribution',i,'.csv',sep='')
   plot_name <- paste('Data/Distribution-Data-Set/Proteomics-100/plots/pca-resampling-proteomics',i,'.png',sep='')
   make_fake_data(inputdata,train_name,test_name,plot_name,i)
   print(i)
