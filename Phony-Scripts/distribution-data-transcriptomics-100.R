@@ -100,9 +100,27 @@ make_fake_data <- function(data,train_file_name,test_file_name,plot_file_name,se
 setwd('C:/Users/Michael/Documents/Holden/')
 inputdata <- read_tsv('Data/Data-Uncompressed-Original/transcriptomics.cct')
 for(i in seq(1,100)){
-  train_name <- paste('Data/Distribution-Data-Set/train_transcriptomics_distribution',i,'.csv',sep='')
-  test_name <- paste('Data/Distribution-Data-Set/test_transcriptomics_distribution',i,'.csv',sep='')
-  plot_name <- paste('Analysis-Scripts/Distribution-Analysis/pca-resampling-transcriptomics',i,'.png',sep='')
+  train_name <- paste('Data/Distribution-Data-Set/Transcriptomics-100/train_transcriptomics_distribution',i,'.csv',sep='')
+  test_name <- paste('Data/Distribution-Data-Set/Transcriptomics-100/test_transcriptomics_distribution',i,'.csv',sep='')
+  plot_name <- paste('Analysis-Scripts/Distribution-Analysis/Transcriptomics-100/plots/pca-resampling-transcriptomics',i,'.png',sep='')
+  make_fake_data(inputdata,train_name,test_name,plot_name,i)
+  print(i)
+}
+
+inputdata <- read_tsv('Data/Data-Uncompressed-Original/CNA.cct')
+for(i in seq(1,100)){
+  train_name <- paste('Data/Distribution-Data-Set/CNA-100/train_cna_distribution',i,'.csv',sep='')
+  test_name <- paste('Data/Distribution-Data-Set/CNA-100/test_cna_distribution',i,'.csv',sep='')
+  plot_name <- paste('Analysis-Scripts/Distribution-Analysis/CNA-100/plots/pca-resampling-cna',i,'.png',sep='')
+  make_fake_data(inputdata,train_name,test_name,plot_name,i)
+  print(i)
+}
+
+inputdata <- read_tsv('Data/Data-Uncompressed-Original/proteomics.cct')
+for(i in seq(1,100)){
+  train_name <- paste('Data/Distribution-Data-Set/Proteomics-100/train_transcriptomics_distribution',i,'.csv',sep='')
+  test_name <- paste('Data/Distribution-Data-Set/Proteomics-100/test_transcriptomics_distribution',i,'.csv',sep='')
+  plot_name <- paste('Analysis-Scripts/Distribution-Analysis/Proteomics-100/plots/pca-resampling-proteomics',i,'.png',sep='')
   make_fake_data(inputdata,train_name,test_name,plot_name,i)
   print(i)
 }
