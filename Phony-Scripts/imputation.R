@@ -11,11 +11,11 @@ set.seed(0)
 
 cna <- read_tsv('../Data/Data-Uncompressed-Original/CNA.cct')
 #get the protein names
-names <- unlist(cna['idx'])
+names <- unlist(info['idx'])
 #remove the row names
-cna <- cna[,2:ncol(cna)]
+info <- info[,2:ncol(info)]
 #transpose the data
-cna <- as.tibble(t(cna))
+info <- as.tibble(t(info))
 
 #create person
 create.person <- function(data,index){
@@ -23,8 +23,13 @@ create.person <- function(data,index){
   data[(nrow(data)+1),] <- data[index,]
   #impute 100 at a time
   #seq(1,(ncol(data)/100))
-  for(i in seq(1,2)){
+  for(i in seq(1,(ncol(data)),100)){
     #replace i through i + 100 with NA
+    if((i+100) > ncol(data)){
+      end <- ncol(data)
+    }else{
+      end <- i+100
+    }
     data[nrow(data),i:(i+100)] <- NA
     output <- DreamAI(data)
     print('Printing Data')
@@ -34,7 +39,8 @@ create.person <- function(data,index){
   }
 }
 
-create.person(cna,1)
+create.person(info,as.numeric(args[2]))
+
 
 
 
