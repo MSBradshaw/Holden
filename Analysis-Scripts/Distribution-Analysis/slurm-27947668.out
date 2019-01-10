@@ -1,0 +1,578 @@
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Requirement already satisfied: pandas==0.23.0 in /zhome/mbrad94/.local/lib/python3.6/site-packages
+Requirement already satisfied: pytz>=2011k in /zapps/anaconda/3/4.3.1/lib/python3.6/site-packages (from pandas==0.23.0)
+Requirement already satisfied: python-dateutil>=2.5.0 in /zapps/anaconda/3/4.3.1/lib/python3.6/site-packages (from pandas==0.23.0)
+Requirement already satisfied: numpy>=1.9.0 in /zapps/anaconda/3/4.3.1/lib/python3.6/site-packages (from pandas==0.23.0)
+Requirement already satisfied: six>=1.5 in /zapps/anaconda/3/4.3.1/envs/fenicsproject/lib/python3.6/site-packages (from python-dateutil>=2.5.0->pandas==0.23.0)
+You are using pip version 9.0.1, however version 18.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Requirement already satisfied: mkl in /zhome/mbrad94/.local/lib/python3.6/site-packages
+Requirement already satisfied: intel-openmp in /zhome/mbrad94/.local/lib/python3.6/site-packages (from mkl)
+You are using pip version 9.0.1, however version 18.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+1
+2
+3
+KNN
+accuracy: 0.67 (+/- 0.11)
+Runtime: 0.005141719182332357 minutes
+SVC
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.005580445130666097 minutes
+RF
+accuracy: 0.67 (+/- 0.13)
+Runtime: 0.029243902365366618 minutes
+Gradient Boosting
+accuracy: 0.65 (+/- 0.12)
+Runtime: 0.09374020497004192 minutes
+Niave Bayes
+accuracy: 0.64 (+/- 0.15)
+Runtime: 0.0043963432312011715 minutes
+LR
+MLP
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.09235892295837403 minutes
+0.684210526316
+0.736842105263
+0.684210526316
+0.631578947368
+0.673684210526
+0.736842105263
+1
+2
+3
+KNN
+accuracy: 0.70 (+/- 0.14)
+Runtime: 0.00507816473642985 minutes
+SVC
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.005602856477101644 minutes
+RF
+accuracy: 0.69 (+/- 0.12)
+Runtime: 0.029207396507263183 minutes
+Gradient Boosting
+accuracy: 0.71 (+/- 0.15)
+Runtime: 0.09781240224838257 minutes
+Niave Bayes
+accuracy: 0.66 (+/- 0.14)
+Runtime: 0.004473042488098144 minutes
+LR
+MLP
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.09484058221181234 minutes
+0.726315789474
+0.736842105263
+0.673684210526
+0.589473684211
+0.684210526316
+0.736842105263
+1
+2
+3
+KNN
+accuracy: 0.66 (+/- 0.15)
+Runtime: 0.005065162976582845 minutes
+SVC
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.005432160695393881 minutes
+RF
+accuracy: 0.70 (+/- 0.13)
+Runtime: 0.02884906530380249 minutes
+Gradient Boosting
+accuracy: 0.72 (+/- 0.13)
+Runtime: 0.09643911123275757 minutes
+Niave Bayes
+accuracy: 0.68 (+/- 0.15)
+Runtime: 0.004424095153808594 minutes
+LR
+MLP
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.09626028935114543 minutes
+0.642105263158
+0.736842105263
+0.705263157895
+0.6
+0.642105263158
+0.736842105263
+1
+2
+3
+KNN
+accuracy: 0.69 (+/- 0.14)
+Runtime: 0.0050040562947591145 minutes
+SVC
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.0055045684178670245 minutes
+RF
+accuracy: 0.67 (+/- 0.12)
+Runtime: 0.02892686128616333 minutes
+Gradient Boosting
+accuracy: 0.66 (+/- 0.13)
+Runtime: 0.09413715998331705 minutes
+Niave Bayes
+accuracy: 0.67 (+/- 0.15)
+Runtime: 0.004314839839935303 minutes
+LR
+MLP
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.09238306681315105 minutes
+0.652631578947
+0.736842105263
+0.631578947368
+0.578947368421
+0.684210526316
+0.736842105263
+1
+2
+3
+KNN
+accuracy: 0.70 (+/- 0.12)
+Runtime: 0.005035698413848877 minutes
+SVC
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.0054983933766682945 minutes
+RF
+accuracy: 0.68 (+/- 0.12)
+Runtime: 0.028910191853841145 minutes
+Gradient Boosting
+accuracy: 0.68 (+/- 0.12)
+Runtime: 0.09207341273625692 minutes
+Niave Bayes
+accuracy: 0.61 (+/- 0.15)
+Runtime: 0.004358855883280436 minutes
+LR
+MLP
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.09516677856445313 minutes
+0.663157894737
+0.736842105263
+0.684210526316
+0.642105263158
+0.705263157895
+0.736842105263
+1
+2
+3
+KNN
+accuracy: 0.72 (+/- 0.09)
+Runtime: 0.005176063378651937 minutes
+SVC
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.005657052993774414 minutes
+RF
+accuracy: 0.66 (+/- 0.13)
+Runtime: 0.02946994702021281 minutes
+Gradient Boosting
+accuracy: 0.67 (+/- 0.13)
+Runtime: 0.10167321364084879 minutes
+Niave Bayes
+accuracy: 0.54 (+/- 0.14)
+Runtime: 0.004548164208730062 minutes
+LR
+MLP
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.09735771417617797 minutes
+0.715789473684
+0.736842105263
+0.673684210526
+0.631578947368
+0.715789473684
+0.736842105263
+1
+2
+3
+KNN
+accuracy: 0.66 (+/- 0.13)
+Runtime: 0.005017002423604329 minutes
+SVC
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.0054492870966593426 minutes
+RF
+accuracy: 0.67 (+/- 0.14)
+Runtime: 0.02922049363454183 minutes
+Gradient Boosting
+accuracy: 0.65 (+/- 0.13)
+Runtime: 0.09131547609965006 minutes
+Niave Bayes
+accuracy: 0.66 (+/- 0.16)
+Runtime: 0.004315181573232015 minutes
+LR
+MLP
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.09259219964345296 minutes
+0.736842105263
+0.736842105263
+0.736842105263
+0.663157894737
+0.715789473684
+0.736842105263
+1
+2
+3
+KNN
+accuracy: 0.71 (+/- 0.12)
+Runtime: 0.005160268147786458 minutes
+SVC
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.005628124872843424 minutes
+RF
+accuracy: 0.65 (+/- 0.14)
+Runtime: 0.029214747746785483 minutes
+Gradient Boosting
+accuracy: 0.67 (+/- 0.15)
+Runtime: 0.09655410051345825 minutes
+Niave Bayes
+accuracy: 0.59 (+/- 0.17)
+Runtime: 0.004509230454762776 minutes
+LR
+MLP
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.09776345888773601 minutes
+0.736842105263
+0.736842105263
+0.726315789474
+0.642105263158
+0.8
+0.736842105263
+1
+2
+3
+KNN
+accuracy: 0.64 (+/- 0.15)
+Runtime: 0.005152936776479085 minutes
+SVC
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.005590291817982992 minutes
+RF
+accuracy: 0.65 (+/- 0.13)
+Runtime: 0.02928139368693034 minutes
+Gradient Boosting
+accuracy: 0.65 (+/- 0.13)
+Runtime: 0.10267912149429322 minutes
+Niave Bayes
+accuracy: 0.61 (+/- 0.17)
+Runtime: 0.0045260429382324215 minutes
+LR
+MLP
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.09815388520558675 minutes
+0.715789473684
+0.736842105263
+0.768421052632
+0.610526315789
+0.810526315789
+0.736842105263
+1
+2
+3
+KNN
+accuracy: 0.72 (+/- 0.12)
+Runtime: 0.0051356156667073565 minutes
+SVC
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.005477011203765869 minutes
+RF
+accuracy: 0.67 (+/- 0.14)
+Runtime: 0.02939814329147339 minutes
+Gradient Boosting
+accuracy: 0.68 (+/- 0.11)
+Runtime: 0.10021618604660035 minutes
+Niave Bayes
+accuracy: 0.61 (+/- 0.15)
+Runtime: 0.004606648286183675 minutes
+LR
+MLP
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.10073877970377604 minutes
+0.694736842105
+0.736842105263
+0.715789473684
+0.6
+0.642105263158
+0.736842105263
+1
+2
+3
+KNN
+accuracy: 0.72 (+/- 0.13)
+Runtime: 0.004884556929270426 minutes
+SVC
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.005297895272572835 minutes
+RF
+accuracy: 0.68 (+/- 0.13)
+Runtime: 0.02854202191034953 minutes
+Gradient Boosting
+accuracy: 0.68 (+/- 0.11)
+Runtime: 0.09253489971160889 minutes
+Niave Bayes
+accuracy: 0.61 (+/- 0.15)
+Runtime: 0.004340867201487224 minutes
+LR
+MLP
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.09335562785466513 minutes
+0.642105263158
+0.736842105263
+0.663157894737
+0.631578947368
+0.684210526316
+0.736842105263
+1
+2
+3
+KNN
+accuracy: 0.69 (+/- 0.12)
+Runtime: 0.005115675926208496 minutes
+SVC
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.005531807740529378 minutes
+RF
+accuracy: 0.71 (+/- 0.14)
+Runtime: 0.029139109452565513 minutes
+Gradient Boosting
+accuracy: 0.70 (+/- 0.13)
+Runtime: 0.09513152043024699 minutes
+Niave Bayes
+accuracy: 0.70 (+/- 0.16)
+Runtime: 0.00437774658203125 minutes
+LR
+MLP
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.09414291381835938 minutes
+0.694736842105
+0.736842105263
+0.673684210526
+0.6
+0.715789473684
+0.736842105263
+1
+2
+3
+KNN
+accuracy: 0.70 (+/- 0.10)
+Runtime: 0.0051480253537495935 minutes
+SVC
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.005545334021250407 minutes
+RF
+accuracy: 0.70 (+/- 0.14)
+Runtime: 0.029319878419240317 minutes
+Gradient Boosting
+accuracy: 0.68 (+/- 0.13)
+Runtime: 0.1004318912823995 minutes
+Niave Bayes
+accuracy: 0.59 (+/- 0.18)
+Runtime: 0.004519041379292806 minutes
+LR
+MLP
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.09801730314890543 minutes
+0.631578947368
+0.736842105263
+0.663157894737
+0.621052631579
+0.684210526316
+0.736842105263
+1
+2
+3
+KNN
+accuracy: 0.70 (+/- 0.12)
+Runtime: 0.004952029387156168 minutes
+SVC
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.0054207285245259605 minutes
+RF
+accuracy: 0.71 (+/- 0.14)
+Runtime: 0.028953826427459715 minutes
+Gradient Boosting
+accuracy: 0.69 (+/- 0.13)
+Runtime: 0.09342878262201945 minutes
+Niave Bayes
+accuracy: 0.68 (+/- 0.14)
+Runtime: 0.004367665449778239 minutes
+LR
+MLP
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.0937561829884847 minutes
+0.715789473684
+0.736842105263
+0.684210526316
+0.610526315789
+0.663157894737
+0.736842105263
+1
+2
+3
+KNN
+accuracy: 0.69 (+/- 0.13)
+Runtime: 0.005157581965128581 minutes
+SVC
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.005581577618916829 minutes
+RF
+accuracy: 0.66 (+/- 0.14)
+Runtime: 0.02947398821512858 minutes
+Gradient Boosting
+accuracy: 0.66 (+/- 0.13)
+Runtime: 0.09868565400441488 minutes
+Niave Bayes
+accuracy: 0.67 (+/- 0.15)
+Runtime: 0.0045051097869873045 minutes
+LR
+MLP
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.09860663811365764 minutes
+0.621052631579
+0.736842105263
+0.684210526316
+0.621052631579
+0.684210526316
+0.736842105263
+1
+2
+3
+KNN
+accuracy: 0.70 (+/- 0.12)
+Runtime: 0.0054297248522440595 minutes
+SVC
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.005930809179941813 minutes
+RF
+accuracy: 0.70 (+/- 0.14)
+Runtime: 0.029282824198404948 minutes
+Gradient Boosting
+accuracy: 0.74 (+/- 0.15)
+Runtime: 0.09743343591690064 minutes
+Niave Bayes
+accuracy: 0.62 (+/- 0.14)
+Runtime: 0.004680848121643067 minutes
+LR
+MLP
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.09615073998769125 minutes
+0.642105263158
+0.736842105263
+0.705263157895
+0.568421052632
+0.747368421053
+0.736842105263
+1
+2
+3
+KNN
+accuracy: 0.65 (+/- 0.15)
+Runtime: 0.005546255906422933 minutes
+SVC
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.006045782566070556 minutes
+RF
+accuracy: 0.66 (+/- 0.14)
+Runtime: 0.02967101732889811 minutes
+Gradient Boosting
+accuracy: 0.65 (+/- 0.13)
+Runtime: 0.09806209405263265 minutes
+Niave Bayes
+accuracy: 0.64 (+/- 0.17)
+Runtime: 0.004843775431315104 minutes
+LR
+MLP
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.09848424593607584 minutes
+0.663157894737
+0.736842105263
+0.757894736842
+0.642105263158
+0.673684210526
+0.736842105263
+1
+2
+3
+KNN
+accuracy: 0.68 (+/- 0.14)
+Runtime: 0.0050757447878519695 minutes
+SVC
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.005591301123301188 minutes
+RF
+accuracy: 0.69 (+/- 0.13)
+Runtime: 0.029095327854156493 minutes
+Gradient Boosting
+accuracy: 0.67 (+/- 0.13)
+Runtime: 0.09570849736531575 minutes
+Niave Bayes
+accuracy: 0.66 (+/- 0.13)
+Runtime: 0.004450452327728271 minutes
+LR
+MLP
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.09473959604899089 minutes
+0.726315789474
+0.736842105263
+0.642105263158
+0.6
+0.673684210526
+0.736842105263
+1
+2
+3
+KNN
+accuracy: 0.68 (+/- 0.15)
+Runtime: 0.005378623803456624 minutes
+SVC
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.00586857795715332 minutes
+RF
+accuracy: 0.69 (+/- 0.13)
+Runtime: 0.0295397679011027 minutes
+Gradient Boosting
+accuracy: 0.69 (+/- 0.12)
+Runtime: 0.09876107374827067 minutes
+Niave Bayes
+accuracy: 0.65 (+/- 0.16)
+Runtime: 0.004710698127746582 minutes
+LR
+MLP
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.09712815284729004 minutes
+0.726315789474
+0.736842105263
+0.757894736842
+0.6
+0.705263157895
+0.736842105263
+1
+2
+3
+KNN
+accuracy: 0.68 (+/- 0.13)
+Runtime: 0.005650349458058675 minutes
+SVC
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.006083103020985922 minutes
+RF
+accuracy: 0.68 (+/- 0.13)
+Runtime: 0.029957203070322673 minutes
+Gradient Boosting
+accuracy: 0.69 (+/- 0.12)
+Runtime: 0.10520904858907064 minutes
+Niave Bayes
+accuracy: 0.67 (+/- 0.15)
+Runtime: 0.004983210563659668 minutes
+LR
+MLP
+accuracy: 0.72 (+/- 0.00)
+Runtime: 0.10392935276031494 minutes
+0.736842105263
+0.736842105263
+0.736842105263
+0.631578947368
+0.778947368421
+0.736842105263

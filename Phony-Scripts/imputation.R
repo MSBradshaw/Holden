@@ -7,9 +7,9 @@ library(glmnet)
 library(DreamAI)
 set.seed(0)
 
-setwd('C:/Users/Michael/Documents/Holden')
+#setwd('C:/Users/Michael/Documents/Holden')
 
-cna <- read_tsv('Data/Data-Uncompressed-Original/CNA.cct')
+cna <- read_tsv('../Data/Data-Uncompressed-Original/CNA.cct')
 #get the protein names
 names <- unlist(cna['idx'])
 #remove the row names
@@ -28,9 +28,9 @@ create.person <- function(data,index){
     data[nrow(data),i:(i+100)] <- NA
     output <- DreamAI(data)
     print('Printing Data')
-    print(data)
+    print(typeof(data))
     print('Printing what was returned')
-    print(output)
+    print(typeof(output))
   }
 }
 
