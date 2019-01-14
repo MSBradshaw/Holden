@@ -1,0 +1,7 @@
+,score,learner
+0,1.0,Random Forest
+1,0.8533333333333334,SVC
+2,1.0,GBC
+3,1.0,Naive Bayes
+4,0.9466666666666667,KNN
+5,0.96,MLP
