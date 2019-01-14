@@ -27,6 +27,5 @@ ax.set_title('Mean Accuracy of Learners on 100 Resampling Proteomics Datasets')
 ax.yaxis.grid(True)
 # Save the figure and show
 plt.tight_layout()
-plt.savefig('proteomics-resampling-100-barplot.png',dpi=100)
+plt.savefig('proteomics-random-100-barplot.png',dpi=100)
 plt.show()
-            

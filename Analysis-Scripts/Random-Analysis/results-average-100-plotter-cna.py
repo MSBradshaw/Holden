@@ -28,6 +28,5 @@ ax.yaxis.grid(True)
 
 # Save the figure and show
 plt.tight_layout()
-plt.savefig('cna-resampling-100-barplot.png',dpi=100)
+plt.savefig('cna-random-100-barplot.png',dpi=100)
 plt.show()
-

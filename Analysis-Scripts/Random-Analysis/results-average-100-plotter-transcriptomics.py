@@ -29,6 +29,5 @@ ax.set_title('Mean Accuracy of Learners on 100 Transcriptomics Resampling Datase
 ax.yaxis.grid(True)
 # Save the figure and show
 plt.tight_layout()
-plt.savefig('transcriptomics-resampling-100-barplot.png',dpi=100)
+plt.savefig('transcriptomics-random-100-barplot.png',dpi=100)
 plt.show()
-
