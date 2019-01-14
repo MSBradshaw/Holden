@@ -1,0 +1,9 @@
+Requirement already satisfied: pandas==0.23.0 in /zhome/mbrad94/.local/lib/python3.6/site-packages
+Requirement already satisfied: pytz>=2011k in /zapps/anaconda/3/4.3.1/lib/python3.6/site-packages (from pandas==0.23.0)
+Requirement already satisfied: numpy>=1.9.0 in /zapps/anaconda/3/4.3.1/lib/python3.6/site-packages (from pandas==0.23.0)
+Requirement already satisfied: python-dateutil>=2.5.0 in /zapps/anaconda/3/4.3.1/lib/python3.6/site-packages (from pandas==0.23.0)
+Requirement already satisfied: six>=1.5 in /zapps/anaconda/3/4.3.1/envs/fenicsproject/lib/python3.6/site-packages (from python-dateutil>=2.5.0->pandas==0.23.0)
+Requirement already satisfied: mkl in /zhome/mbrad94/.local/lib/python3.6/site-packages
+Requirement already satisfied: intel-openmp in /zhome/mbrad94/.local/lib/python3.6/site-packages (from mkl)
+1
+1

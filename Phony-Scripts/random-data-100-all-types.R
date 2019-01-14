@@ -2,7 +2,7 @@ library(readr)
 library(tibble)
 library(ggplot2)
 
-setwd('C:/Users/Michael/Documents/Holden/')
+setwd('/fslhome/mbrad94/Holden2.0/')
 #cna <- read_tsv('Data/Data-Uncompressed-Original/CNA.cct')
 make_fake_data <- function(data,train_file_name,test_file_name,plot_file_name,seed=0){
   set.seed(seed)
@@ -97,7 +97,7 @@ make_fake_data <- function(data,train_file_name,test_file_name,plot_file_name,se
   
 }
 
-setwd('C:/Users/Michael/Documents/Holden2/')
+#setwd('C:/Users/Michael/Documents/Holden2/')
 inputdata <- read_tsv('Data/Data-Uncompressed-Original/transcriptomics.cct')
 for(i in seq(1,100)){
   train_name <- paste('Data/Random-Data-Set/Transcriptomics-100/train_transcriptomics_random',i,'.csv',sep='')
