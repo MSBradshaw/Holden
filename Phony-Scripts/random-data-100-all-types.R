@@ -119,7 +119,7 @@ for(i in seq(1,100)){
 }
 
 inputdata <- read_tsv('Data/Data-Uncompressed-Original/proteomics.cct')
-for(i in seq(1,100)){
+for(i in seq(78,100)){
   train_name <- paste('Data/Random-Data-Set/Proteomics-100/train_proteomics_random',i,'.csv',sep='')
   test_name <- paste('Data/Random-Data-Set/Proteomics-100/test_proteomics_random',i,'.csv',sep='')
   plot_name <- paste('Data/Random-Data-Set/Proteomics-100/plots/pca-random-proteomics',i,'.png',sep='')
