@@ -20,4 +20,4 @@ export OMP_NUM_THREADS=$SLURM_CPUS_ON_NODE
 
 module load r
 
-Rscript imputations-real.R ../Data/Data-Uncompressed-Original/CNA.cct 1 imp-test1000.csv
+Rscript imputations-test-1000.R ../Data/Data-Uncompressed-Original/CNA.cct 1 imp-test1000.csv
