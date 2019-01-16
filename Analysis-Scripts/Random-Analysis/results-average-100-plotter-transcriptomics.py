@@ -25,7 +25,7 @@ ax.bar(x_position, combind['mean'].tolist(), yerr=combind['std'].tolist(), align
 ax.set_xticks(x_position)
 ax.set_ylabel('% Accuracy')
 ax.set_xticklabels(combind['Index'])
-ax.set_title('Mean Accuracy of Learners on 100 Transcriptomics Resampling Datasets')
+ax.set_title('Mean Accuracy of Learners on 100 Random Transcriptomic Datasets')
 ax.yaxis.grid(True)
 # Save the figure and show
 plt.tight_layout()
