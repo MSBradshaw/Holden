@@ -53,3 +53,5 @@ During startup - Warning messages:
 6: Setting LC_PAPER failed, using "C" 
 7: Setting LC_MEASUREMENT failed, using "C" 
 [1] "Method 5/7 complete"
+[1] "Method 6/7 complete"
+[1] "Method 7/7 complete"
