@@ -65,7 +65,10 @@ create.person <- function(data,row,start,output_name){
   return(data_small)
 }
 
-
-data_set = gsub('\\.\\w+','',str_extract(file_path,'\\w*\\.\\w+'))
-outfile = paste(as.character(index),'-',as.character(start_pos),'-',as.character(data_set),'.csv',sep='')
-a= create.person(info,index,start_pos,outfile)
+if(start_pos > ncol(info)){
+  print('Skipping High Start Value')
+}else{
+  data_set = gsub('\\.\\w+','',str_extract(file_path,'\\w*\\.\\w+'))
+  outfile = paste(as.character(index),'-',as.character(start_pos),'-',as.character(data_set),'.csv',sep='')
+  a= create.person(info,index,start_pos,outfile)
+}
