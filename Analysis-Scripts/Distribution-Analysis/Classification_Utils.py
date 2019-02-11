@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import re
-from sklearn import tree
+
 from sklearn.decomposition import PCA
 from sklearn.ensemble import ExtraTreesClassifier, GradientBoostingClassifier, RandomForestClassifier
 from sklearn.feature_selection import SelectKBest, SelectPercentile
@@ -19,7 +19,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.svm import LinearSVC, SVC
 from sklearn.neural_network import MLPClassifier
-
+from sklearn import tree
 
 #########################
 #
@@ -38,7 +38,7 @@ Args:
     num_splits (int): number of train-test splits to test
     scoring (string): scoring method
         http://scikit-learn.org/stable/modules/model_evaluation.html#scoring-parameter
-    
+
 Returns:
     The given model fitted on all inputted data
     Prints mean cross-validation score and 95% confidence interval
@@ -219,7 +219,7 @@ Args:
     data (dataframe): new data to be labelled by the model
     labels (list of strings): list of correct labels for the input data
     print_details (boolean, optional): Determines whether to print prediction information. Defaults to True
-    
+
 Returns:
     List of strings: List of predicted labels
     Prints accuracy score, as well as the predicted and actual labels
@@ -230,7 +230,7 @@ def make_test_prediction(model, data, labels, print_details=True):
         print('score', accuracy_score(pred, labels))
         print('pred', pred)
         print('actual', labels)
-    
+
     return pred
 
 """
@@ -249,7 +249,7 @@ def show_prediction_probabilities(model, data, idx):
     print('Prediction probabilities for sample:')
     for prob in zip(classes, pred_probabilities[idx]):
         print(prob[0], ':', prob[1])
-    
+
 
 #########################
 #
@@ -262,12 +262,12 @@ def show_prediction_probabilities(model, data, idx):
 Args:
     file_dir (string): path to directory containing files
     file_paths (list of strings): list of file names of csvs to read
-    
+
 Returns:
     dataframe containing data from all csvs referenced by file_paths. Dataframe index is 'Peptide'; each column represents a single sample.
 """
 def combine_csvs(file_dir, file_names):
-    
+
     dfs = []
 
     for file in file_names:
@@ -278,7 +278,7 @@ def combine_csvs(file_dir, file_names):
     for df in dfs:
         df.set_index('Peptide', inplace=True)
         combined_df = combined_df.join(df, how='outer')
-        
+
     return combined_df
 
 
@@ -292,7 +292,7 @@ Args:
     df (dataframe)
     before (string)
     after (string)
-    
+
 Returns:
     List of strings: a list of the new column names
 """
@@ -302,16 +302,16 @@ def rename_columns(df, before, after):
     for column in columns:
         new_column = re.sub(before, after, column)
         new_columns.append(new_column)
-        
+
     return new_columns
 
 
 """
-Args: 
+Args:
     columns (list of strings): list of all column names in df
     organ_to_columns (dict): mapping of each organ to its column names {str: list of str}
-    
-Returns: 
+
+Returns:
     List of strings representing the labels for each dataframe column
 """
 def get_labels(columns, organ_to_columns):
@@ -320,7 +320,7 @@ def get_labels(columns, organ_to_columns):
     for column in columns:
         key = next(key for key, value in organ_to_columns.items() if column in value)
         labels.append(key)
-        
+
     return labels
 
 """
@@ -331,14 +331,14 @@ Args:
     max_tissues (int)
     tissues (list of strings)
     imputed_val (int): impute value for non-observed peptides in df
-    
+
 Returns:
     df filtered to only contain peptides present in at least min_samples samples of a single tissue, for a number of tissues specified by min_tissues and max_tissues
 """
 def filter_peptides_by_samples_and_tissues(df, min_samples, min_tissues, max_tissues, tissues, imputed_val):
     df_cols = df.columns.values.tolist()
     organ_counts = {}
-    
+
     for tissue in tissues:
         cols = [col for col in df_cols if col.startswith(tissue)] # Get corresponding list of column names
         organ_counts[tissue] = (df[cols] != imputed_val).sum(1) # count number of samples with non-imputed abundance for each protein
@@ -353,17 +353,17 @@ def filter_peptides_by_samples_and_tissues(df, min_samples, min_tissues, max_tis
 """
 Args:
     df (dataframe): rows are peptide/proteins, columns are samples, data = abundance values
-    
+
 Returns:
     dataframe transformed so that rows represent all pairwise peptide/protein ratios
 """
 def pairwise_transform(df):
 
     index = df.index.values.tolist()
-    
+
     new_indices = []
     new_data = {}
-    
+
     for col in df.columns:                             # For each sample
         for i in index:                                # For each pair of peptides
             for j in index:
@@ -373,13 +373,13 @@ def pairwise_transform(df):
                     new_indices.append(new_index)      # Add new index to list
 
                 data = new_data.get(col, list())       # Add ratio to corresponding data
-                data.append(ratio) 
+                data.append(ratio)
 
                 new_data[col] = data
 
     transformed_df = pd.DataFrame(new_data, columns=df.columns, index=new_indices)
     return transformed_df
-    
+
 
 """
 Fits new data to training features so that it can be classified
@@ -395,23 +395,23 @@ Returns:
 def fit_new_data(original_df, new_df, features_to_keep=None):
 
     fitted_data = original_df.join(new_df)
-    
+
     fitted_data.iloc[:,:] = np.log2(fitted_data.iloc[:,:])
     fitted_data.replace([np.inf, -np.inf], np.nan, inplace=True)
-    
+
     fitted_data = fitted_data.fillna(fitted_data.min().min()/2)
-    
+
     median_of_medians = fitted_data.median().median()
     fitted_data /= fitted_data.median(axis=0) # divide each value by sample median
     fitted_data *= median_of_medians
-    
+
     fitted_data.drop(original_df.columns, axis=1, inplace=True)
-    
+
     fitted_data = fitted_data.T
-    
+
     if(features_to_keep is not None):
         fitted_data = fitted_data[features_to_keep]
-    
+
     return fitted_data
 
 """
@@ -433,12 +433,12 @@ def abundance_to_binary(df):
 Args:
     df (dataframe): columns represent samples, named with the tissue type
     list_of_tissues (list of strings): all tissues represented in the dataframe
-    
+
 Returns:
     dict {string: list of strings} where keys are tissues and values are corresponding column names
 """
 def map_tissues_to_columns(df, list_of_tissues):
-    
+
     tissues_to_columns = dict([(key, []) for key in list_of_tissues])
 
     for column_name in df.columns.values.tolist():
@@ -446,7 +446,7 @@ def map_tissues_to_columns(df, list_of_tissues):
             if tissue in column_name:
                 tissues_to_columns[tissue].append(column_name)
                 continue
-                
+
     return tissues_to_columns
 
 """
@@ -462,7 +462,7 @@ def plot_confusion_matrix(cm, classes,
     Normalization can be applied by setting `normalize=True`.
     """
     fig, ax = plt.subplots(figsize=(8, 8))
-    
+
     if normalize:
         cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
         print("Normalized confusion matrix")
@@ -515,28 +515,28 @@ def show_confusion_matrices(y_test, y_pred, groups, title='Confusion Matrix'):
                           title= 'Normalized ' + title)
 
     plt.show()
-    
-    
+
+
 """
 Args:
     df (dataframe)
     labels (list of strings): List of column labels for each column in df
-    
+
 Returns:
     dict({string: list of strings}): key is the name of an organ/tissue, value is a sorted list of the top proteins expressed in that organ/tissue by mean abundance
 """
 def get_descending_abundances(df, labels):
     labelled_df = df
     labelled_df.columns = labels
-    
+
     label_to_proteins = {} # {label: list of proteins}
     for label in labels:
         sub_df = labelled_df[label]
         sorted_proteins = sub_df.mean(axis=1).sort_values(ascending=False)
         label_to_proteins[label] = sorted_proteins.index.values
-        
+
     return label_to_proteins
-        
+
 """
 Args:
     labels_to_proteins (dict {string : list of strings}): output from get_descending_abundances
@@ -547,8 +547,8 @@ Returns:
     list of strings: top n proteins by abundance for the given organ/tissue
 """
 def n_most_abundant(labels_to_proteins, label, n):
-    
-    top_proteins = labels_to_proteins[label][:n] 
+
+    top_proteins = labels_to_proteins[label][:n]
     return top_proteins
 
 
@@ -564,7 +564,7 @@ Args:
     df (dataframe): rows are proteins/peptides, columns are samples
     labels (list of strings): list of corresponding labels for df columns
     k (int): number of features to keep
-    
+
 Returns:
     transformed df with only the k best features kept
 """
@@ -584,7 +584,7 @@ Args:
     df (dataframe): rows are proteins/peptides, columns are samples
     labels (list of strings): list of corresponding labels for df columns
     k (int): percentile of features to keep
-    
+
 Returns:
     transformed df with only the k percentile best features kept
 """

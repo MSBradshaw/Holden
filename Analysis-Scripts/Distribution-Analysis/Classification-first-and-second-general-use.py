@@ -7,8 +7,8 @@ import sys
 
 sys.argv[1]
 sys.argv[2]
-#'../../Data/Distribution-Data-Set/train_transcriptomics_distribution.csv'
-#'../../Data/Distribution-Data-Set/test_transcriptomics_distribution.csv'
+#'../../Data/Distribution-Data-Set/train_cna_distribution.csv'
+#'../../Data/Distribution-Data-Set/test_cna_distribution.csv'
 print(1)
 df = pd.read_csv(sys.argv[1])
 df_test = pd.read_csv(sys.argv[2])
