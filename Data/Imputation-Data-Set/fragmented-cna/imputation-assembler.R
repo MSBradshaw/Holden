@@ -21,11 +21,11 @@ print(tail(names))
 
 for( i in c(1:50)){
   print(i)
-  n0 <- read_csv(paste(i,'-0-CNA.csv',sep=''))
-  n1 <- read_csv(paste(i,'-1-CNA.csv',sep=''))
-  n2 <- read_csv(paste(i,'-2-CNA.csv',sep=''))
-  n3 <- read_csv(paste(i,'-3-CNA.csv',sep=''))
-  n4 <- read_csv(paste(i,'-4-CNA.csv',sep=''))
+  n0 <- read_csv(paste(i,'-0-CNA3.csv',sep=''))
+  n1 <- read_csv(paste(i,'-1-CNA3.csv',sep=''))
+  n2 <- read_csv(paste(i,'-2-CNA3.csv',sep=''))
+  n3 <- read_csv(paste(i,'-3-CNA3.csv',sep=''))
+  n4 <- read_csv(paste(i,'-4-CNA3.csv',sep=''))
   n <- c(as.numeric(n0[1,]),as.numeric(n1[1,]),as.numeric(n2[1,]),as.numeric(n3[1,]),as.numeric(n4[1,]),'phony')
   # add the new row to the original data
   data[(nrow(data)+1),] <- n
@@ -66,5 +66,5 @@ colnames(train) <- names
 colnames(test) <- names
 
 #write train and test sets as csv
-write_csv(train,'CNA-imputation-train.csv')
-write_csv(test,'CNA-imputaion-test.csv')
+write_csv(train,'CNA3-imputation-train.csv')
+write_csv(test,'CNA3-imputation-test.csv')
