@@ -1,0 +1,7 @@
+,score,learner,type
+0,0.9866666666666667,Random Forest,imputation
+1,0.7866666666666666,SVC,imputation
+2,0.9866666666666667,GBC,imputation
+3,0.9866666666666667,Naive Bayes,imputation
+4,0.9333333333333333,KNN,imputation
+5,0.7866666666666666,MLP,imputation

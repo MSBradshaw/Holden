@@ -14,7 +14,7 @@ data <- as.tibble(t(data))
 
 
 data['labels'] <- replicate(nrow(data), "real")
-
+names <- c(names,'labels')
 colnames(data) <- names
 
 print(tail(names))

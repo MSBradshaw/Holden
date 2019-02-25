@@ -15,13 +15,13 @@ def clean_data(df):
     df = df.replace('nan',0)
     df = df.fillna(0)
     return(df)
-
+#python Classification-Optimized-General-Use.py ../../Data/Imputation-Data-Set/CNA-imputation-train.csv ../../Data/Imputation-Data-Set/CNA-imputation-test.csv imputation-cna-results.csv imputation
 sys.argv[1]
 sys.argv[2]
-#'../../Data/Distribution-Data-Set/train_transcriptomics_distribution.csv'
+#../../Data/Imputation-Data-Set/CNA-imputation-train.csv
 #'../../Data/Distribution-Data-Set/test_transcriptomics_distribution.csv'
-df = pd.read_csv(sys.argv[1])
-df_test = pd.read_csv(sys.argv[2])
+df = pd.read_csv('../../Data/Imputation-Data-Set/CNA-imputation-train.csv')
+df_test = pd.read_csv('../../Data/Imputation-Data-Set/CNA-imputation-test.csv')
 print(1)
 
 df = clean_data(df)
@@ -120,7 +120,9 @@ print(knn_result)
 print(mlp_result)
 results = [rf_result,svc_result,gbc_result,gnb_result,knn_result,mlp_result]
 learners = ['Random Forest','SVC','GBC','Naive Bayes','KNN','MLP']
+t='imputation'
 t = sys.argv[4]
+
 type = [t,t,t,t,t,t]
 final = pd.DataFrame({'score':results,'learner':learners,'type':type})
 final.head()

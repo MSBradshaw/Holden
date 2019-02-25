@@ -1,0 +1,7 @@
+,score,learner,type
+0,0.9866666666666667,Random Forest,random
+1,0.84,SVC,random
+2,1.0,GBC,random
+3,1.0,Naive Bayes,random
+4,0.8933333333333333,KNN,random
+5,0.88,MLP,random
