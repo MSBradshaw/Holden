@@ -1,0 +1,33 @@
+library(readr)
+library(tibble)
+library(ggplot2)
+library(dplyr)
+
+#read in resampling data
+data <- read_csv('Holden/Analysis-Scripts/Generic-Analysis/cna-resampling-results/resample-cna-1.csv')
+for(i in seq(2:100)){
+  temp <- read_csv(paste('Holden/Analysis-Scripts/Generic-Analysis/cna-resampling-results/resample-cna-',i,'.csv',sep=''))
+  data <- bind_rows(data,temp)
+}
+
+#read in resampling data
+for(i in seq(1:100)){
+  temp <- read_csv(paste('Holden/Analysis-Scripts/Generic-Analysis/resampling-trans-results/resample-trans-',i,'.csv',sep=''))
+  data <- bind_rows(data,temp)
+}
+
+for(i in seq(1:100)){
+  temp <- read_csv(paste('Holden/Analysis-Scripts/Generic-Analysis/resample-pro-results/resample-pro-',i,'.csv',sep=''))
+  data <- bind_rows(data,temp)
+}
+
+colnames(data) <- c("X1","score","Models","type")
+p <- ggplot(data, aes(x=type, y=score, fill=Models, color=Models)) + 
+  geom_boxplot(outlier.colour="red", outlier.shape=8,
+               outlier.size=2,alpha = 0.5,notch = TRUE) + 
+  ggtitle('Resampling Results') + 
+  ylab('Accuracy') +
+  xlab('Learner') + ylim(0.0,1.0) +
+  scale_x_discrete(c('Data Sets','f','d'),waiver(),c('CNA','Proteomic','Transcriptomics'),c('cna','pro','tran'))
+p
+ggsave('Holden/Analysis-Scripts/Generic-Analysis/total-resampling-box-plots.png',width = 15, height = 10, units = c("in"))
