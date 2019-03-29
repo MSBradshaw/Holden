@@ -1,0 +1,7 @@
+,score,learner,type
+0,1.0,Random Forest,cna
+1,0.84,SVC,cna
+2,1.0,GBC,cna
+3,0.9733333333333334,Naive Bayes,cna
+4,0.84,KNN,cna
+5,0.8,MLP,cna

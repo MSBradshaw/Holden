@@ -4,7 +4,7 @@ import numpy as np
 import re
 import sys
 
-sys.path.insert(0, '/mnt/c/Users/Michael/Documents/Holden')
+sys.path.insert(0, '/fslhome/mbrad94/Holden/')
 import Classification_Utils as cu
 import DigitPreferences as dig
 
@@ -16,12 +16,12 @@ def clean_data(df):
     df = df.fillna(0)
     return(df)
 #python Classification-Optimized-General-Use.py ../../Data/Imputation-Data-Set/CNA-imputation-train.csv ../../Data/Imputation-Data-Set/CNA-imputation-test.csv imputation-cna-results.csv imputation
-sys.argv[1]
-sys.argv[2]
 #../../Data/Imputation-Data-Set/CNA-imputation-train.csv
 #'../../Data/Distribution-Data-Set/test_transcriptomics_distribution.csv'
-df = pd.read_csv('../../Data/Imputation-Data-Set/CNA-imputation-train.csv')
-df_test = pd.read_csv('../../Data/Imputation-Data-Set/CNA-imputation-test.csv')
+df = pd.read_csv(sys.argv[1])
+df_test = pd.read_csv(sys.argv[2])
+#df = pd.read_csv('../../Data/Imputation-Data-Set/cna-50/CNA-imputation-train-6.csv')
+#df_test = pd.read_csv('../../Data/Imputation-Data-Set/cna-50/CNA-imputaion-test-6.csv')
 print(1)
 
 df = clean_data(df)
