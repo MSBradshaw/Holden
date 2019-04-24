@@ -22,7 +22,9 @@ for(i in seq(1:100)){
 }
 
 colnames(data) <- c("X1","score","Models","type")
-p <- ggplot(data, aes(x=type, y=score, fill=Models, color=Models)) + 
+datatemp = data[data$Models != 'MLP',]
+datatemp = datatemp[datatemp$Models != 'SVC',]
+p <- ggplot(datatemp, aes(x=type, y=score, fill=Models, color=Models)) + 
   geom_boxplot(outlier.colour="red", outlier.shape=8,
                outlier.size=2,alpha = 0.5,notch = TRUE) + 
   ggtitle('Resampling Results') + 
