@@ -19,3 +19,13 @@ p <- ggplot(data, aes(x=learner, y=score, fill=learner)) +
   xlab('Learner') + ylim(0.0,1.0)
 p
 ggsave('Holden/Analysis-Scripts/Generic-Analysis/cna-random-box-plots-ff.png',width = 10, height = 10, units = c("in"))
+
+#calc standard deviation for each model
+#RF
+sd(data[data$learner=='Random Forest',]$score)
+#GBC
+sd(data[data$learner=='GBC',]$score)
+#Naive Bayes
+sd(data[data$learner=='Naive Bayes',]$score)
+#KNN
+sd(data[data$learner=='KNN',]$score)
