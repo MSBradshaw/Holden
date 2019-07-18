@@ -21,3 +21,15 @@ df = clean_data(df)
 labels = df['labels']
 first_df = dig.digit_preference_first_after_dec(df)
 first_df.to_csv('/mnt/c/Users/Michael/Documents/Holden2/Analysis-Scripts/Generic-Analysis/random-first-digits.csv')
+
+df = pd.read_csv('/mnt/c/Users/Michael/Documents/Holden2/Data/Distribution-Data-Set/test_cna_distribution.csv')
+df = clean_data(df)
+labels = df['labels']
+first_df = dig.digit_preference_first_after_dec(df)
+first_df.to_csv('/mnt/c/Users/Michael/Documents/Holden2/Analysis-Scripts/Generic-Analysis/resampled-first-digits.csv')
+
+df = pd.read_csv('/mnt/c/Users/Michael/Documents/Holden2/Data/Imputation-Data-Set/CNA-imputation-test.csv')
+df = clean_data(df)
+labels = df['labels']
+first_df = dig.digit_preference_first_after_dec(df)
+first_df.to_csv('/mnt/c/Users/Michael/Documents/Holden2/Analysis-Scripts/Generic-Analysis/imputation-first-digits.csv')

@@ -29,7 +29,7 @@ p <- ggplot(data = tib, aes(x =PC1,y=PC2,color=data_type )) + geom_point(size = 
   ggtitle('PCA of Real and Fake Data') + 
   theme_grey(base_size = 22)
 p
-ggsave('Holden/Data/pca-4-groups.png',width = 10, height = 10, units = c("in"))
+ggsave('Holden2/Data/pca-4-groups.png',width = 10, height = 10, units = c("in"))
 
 
 
