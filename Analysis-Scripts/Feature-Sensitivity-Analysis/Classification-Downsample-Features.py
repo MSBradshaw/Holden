@@ -7,7 +7,9 @@ import random
 
 
 # path to root of this project so Classification_Utils and DigitPreferences can be imported
-sys.path.insert(0, '/Users/michael/Holden/')
+#sys.path.insert(0, '/Users/michael/Holden/')
+# Fiji path
+sys.path.insert(0, '/Users/mibr6115/Holden/')
 import Classification_Utils as cu
 import DigitPreferences as dig
 
@@ -173,4 +175,6 @@ numbers = [number_of_features,number_of_features,number_of_features,number_of_fe
 type = [t, t, t, t]
 final = pd.DataFrame({'score': results, 'learner': learners, 'type': type, 'features': numbers})
 final.head()
-final.to_csv(sys.argv[3])
+#final.to_csv(sys.argv[3])
+with open(sys.argv[3], 'a') as f:
+    final.to_csv(f, header=False)
