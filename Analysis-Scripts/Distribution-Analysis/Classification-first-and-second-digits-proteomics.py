@@ -133,7 +133,7 @@ df_test = df_test.fillna(0)
 df.head()
 df_test.head()
 
-NUM_SPLITS = 100 # number of train/test splits in cross validation
+NUM_SPLITS = 10 # number of train/test splits in cross validation
 
 print('KNN')
 start = time.time()
@@ -214,4 +214,3 @@ final = pd.DataFrame({'score':results,'learner':learners})
 final.head()
 
 ggplot(aes(x='learner', weight='score'), data=final) + geom_bar() + ggtitle('Resampling Test Proteomics Accuracy') + xlab('Model') + ylab('Accuracy')
-

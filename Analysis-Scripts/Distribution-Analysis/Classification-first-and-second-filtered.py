@@ -128,7 +128,7 @@ df_test = df_test.fillna(0)
 df.head()
 df_test.head()
 
-NUM_SPLITS = 100 # number of train/test splits in cross validation
+NUM_SPLITS = 10 # number of train/test splits in cross validation
 
 print('KNN')
 start = time.time()

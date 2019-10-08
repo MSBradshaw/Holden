@@ -21,4 +21,4 @@ sns.set(style="whitegrid")
 ax = sns.barplot(x="digit", y="freq",hue="labels", data=pd_f)
 ax.figure.savefig(sys.argv[2])
 
-#../../Data/Distribution-Data-Set/CNA-100/test_cna_distribution1.csv
+#../../Data/Distribution-Data-Set/CNA-10/test_cna_distribution1.csv

@@ -40,7 +40,7 @@ print(5)
 df = pd.merge(first_df, second_df, left_index=True, right_index=True)
 df_test = pd.merge(first_df_test, second_df_test, left_index=True, right_index=True)
 print(6)
-NUM_SPLITS = 100 # number of train/test splits in cross validation
+NUM_SPLITS = 10 # number of train/test splits in cross validation
 
 #drop columns not intended for training
 df = df.drop(['sample_id_x', 'sample_id_y', 'labels_x', 'labels_y' ], axis=1)

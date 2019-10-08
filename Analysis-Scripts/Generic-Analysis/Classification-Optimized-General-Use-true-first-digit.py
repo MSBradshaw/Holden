@@ -37,7 +37,7 @@ df = dig.digit_preference_true_first_digit(df)
 print(4)
 df_test = dig.digit_preference_true_first_digit(df_test)
 print(5)
-NUM_SPLITS = 100 # number of train/test splits in cross validation
+NUM_SPLITS = 10 # number of train/test splits in cross validation
 
 #drop columns not intended for training
 print(df.columns)
