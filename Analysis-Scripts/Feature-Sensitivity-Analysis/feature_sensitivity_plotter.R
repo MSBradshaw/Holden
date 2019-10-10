@@ -49,42 +49,17 @@ knn$error <- errors
 
 d <- bind_rows(knn,nb,gb,rf)
 
-d$charFeatures <- factor(as.character(d$features),level=c('100','500','1000','2000','4000','6000','8000','10000','12000','14000','16000','17000'))
-
-number <- c('100','500','1000','2000','4000','6000','8000','10000','12000','14000','16000','17000')
-
 d$size = apply(d,1,function(row){
   groups <- c(100,500,1000,2000,4000,6000,8000,10000,12000,14000,16000,17000)
-  #groups <- c('100','500','1000','2000','4000','6000','8000','10000','12000','14000','16000','17000')
   i <- match(as.numeric(row[6]),groups)
   i
 })
 
-data$charFeatures <- factor(as.character(data$features),level=c('100','500','1000','2000','4000','6000','8000','10000','12000','14000','16000','17000'))
-
-# TODO added error bars to the last graph
-
-ggplot(data = data,aes(x=charFeatures,y=score,color=learner))  + geom_boxplot()
-ggsave('/Users/michael/Holden/Analysis-Scripts/Feature-Sensitivity-Analysis/results.png',units='in',width=11,height=8.5)
-
-ggplot(data = d,aes(x=charFeatures,y=score,color=learner))  + geom_point()
-ggsave('/Users/michael/Holden/Analysis-Scripts/Feature-Sensitivity-Analysis/results-point.png',units='in',width=11,height=8.5)
-
-ggplot(data = d,aes(x=charFeatures,y=score,color=learner))  + geom_point() + geom_errorbar(aes(ymin=score-error, ymax=score+error),width=.2)
-ggsave('/Users/michael/Holden/Analysis-Scripts/Feature-Sensitivity-Analysis/results-point-errorbar.png',units='in',width=11,height=8.5)
 
 ggplot(data = d,aes(x=size,y=score,color=learner))  + geom_point() + 
   geom_errorbar(aes(ymin=score-error, ymax=score+error),width=.2) + 
   xlab('number of features') +
+  ylab('mean score from 100 replicates') + 
   geom_line() + scale_x_continuous(breaks = 1:12,
                                    labels = c('100','500','1000','2000','4000','6000','8000','10000','12000','14000','16000','17000'))
 ggsave('/Users/michael/Holden/Analysis-Scripts/Feature-Sensitivity-Analysis/results-point-errorbar-line.png',units='in',width=11,height=8.5)
-
-ggplot(data = d,aes(x=features,y=score,color=learner))  + geom_line()
-ggsave('/Users/michael/Holden/Analysis-Scripts/Feature-Sensitivity-Analysis/results-line.png',units='in',width=11,height=8.5)
-
-ggplot(data = d,aes(x=log(features),y=score,color=learner))  + geom_line() + geom_point()
-ggsave('/Users/michael/Holden/Analysis-Scripts/Feature-Sensitivity-Analysis/results-line-log.png',units='in',width=11,height=8.5)
-
-ggplot(data = d,aes(x=log(features),y=score,color=learner))  + geom_line() + geom_point() + geom_errorbar(aes(ymin=score-error, ymax=score+error))
-ggsave('/Users/michael/Holden/Analysis-Scripts/Feature-Sensitivity-Analysis/results-line-log_errorbar.png',units='in',width=11,height=8.5)
