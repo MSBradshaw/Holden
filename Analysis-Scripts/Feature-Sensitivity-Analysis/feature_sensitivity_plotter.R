@@ -55,11 +55,10 @@ d$size = apply(d,1,function(row){
   i
 })
 
-
 ggplot(data = d,aes(x=size,y=score,color=learner))  + geom_point() + 
   geom_errorbar(aes(ymin=score-error, ymax=score+error),width=.2) + 
   xlab('number of features') +
   ylab('mean score from 100 replicates') + 
   geom_line() + scale_x_continuous(breaks = 1:12,
                                    labels = c('100','500','1000','2000','4000','6000','8000','10000','12000','14000','16000','17000'))
-ggsave('/Users/michael/Holden/Analysis-Scripts/Feature-Sensitivity-Analysis/results-point-errorbar-line.png',units='in',width=11,height=8.5)
+ggsave('/Users/michael/Holden/Analysis-Scripts/Feature-Sensitivity-Analysis/featureDownsampling.png',units='in',width=11,height=8.5)
