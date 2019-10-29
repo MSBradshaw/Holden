@@ -1,0 +1,1171 @@
+90
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.88 (+/- 0.11)
+Runtime: 0.0025579015413920085 minutes
+RF
+accuracy: 1.00 (+/- 0.03)
+Runtime: 0.008253061771392822 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.012176744143168132 minutes
+Niave Bayes
+accuracy: 0.98 (+/- 0.04)
+Runtime: 0.0013489286104838053 minutes
+LR
+0.9733333333333334
+0.9866666666666667
+0.96
+0.9466666666666667
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.87 (+/- 0.09)
+Runtime: 0.0014228502909342448 minutes
+RF
+accuracy: 0.98 (+/- 0.06)
+Runtime: 0.004724673430124919 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.011027053991953532 minutes
+Niave Bayes
+accuracy: 0.93 (+/- 0.14)
+Runtime: 0.0015128652254740398 minutes
+LR
+0.9866666666666667
+0.9866666666666667
+0.96
+0.9066666666666666
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.83 (+/- 0.08)
+Runtime: 0.001510341962178548 minutes
+RF
+accuracy: 1.00 (+/- 0.03)
+Runtime: 0.005620412031809489 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.011520016193389892 minutes
+Niave Bayes
+accuracy: 0.93 (+/- 0.11)
+Runtime: 0.002116048336029053 minutes
+LR
+0.9733333333333334
+0.9733333333333334
+0.92
+0.92
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.85 (+/- 0.07)
+Runtime: 0.0014348308245340983 minutes
+RF
+accuracy: 1.00 (+/- 0.03)
+Runtime: 0.004857091108957926 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.009916536013285319 minutes
+Niave Bayes
+accuracy: 0.93 (+/- 0.07)
+Runtime: 0.001201629638671875 minutes
+LR
+0.9466666666666667
+0.9866666666666667
+0.96
+0.88
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.87 (+/- 0.16)
+Runtime: 0.001326441764831543 minutes
+RF
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.004584002494812012 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.00959683656692505 minutes
+Niave Bayes
+accuracy: 0.93 (+/- 0.09)
+Runtime: 0.0010431607564290364 minutes
+LR
+0.9733333333333334
+0.9866666666666667
+0.9733333333333334
+0.9466666666666667
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.83 (+/- 0.07)
+Runtime: 0.001378325621287028 minutes
+RF
+accuracy: 0.98 (+/- 0.04)
+Runtime: 0.004639200369517009 minutes
+Gradient Boosting
+accuracy: 0.98 (+/- 0.04)
+Runtime: 0.009472207228342692 minutes
+Niave Bayes
+accuracy: 0.90 (+/- 0.09)
+Runtime: 0.0010162154833475749 minutes
+LR
+0.9733333333333334
+0.9733333333333334
+0.9333333333333333
+0.88
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.87 (+/- 0.09)
+Runtime: 0.0013700564702351888 minutes
+RF
+accuracy: 0.99 (+/- 0.04)
+Runtime: 0.004870200157165527 minutes
+Gradient Boosting
+accuracy: 0.99 (+/- 0.04)
+Runtime: 0.0102631409962972 minutes
+Niave Bayes
+accuracy: 0.93 (+/- 0.19)
+Runtime: 0.0010407487551371255 minutes
+LR
+0.9866666666666667
+1.0
+0.9333333333333333
+0.8533333333333334
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.82 (+/- 0.14)
+Runtime: 0.0013654351234436036 minutes
+RF
+accuracy: 0.97 (+/- 0.10)
+Runtime: 0.004757940769195557 minutes
+Gradient Boosting
+accuracy: 0.99 (+/- 0.04)
+Runtime: 0.00996073881785075 minutes
+Niave Bayes
+accuracy: 0.92 (+/- 0.13)
+Runtime: 0.0010378797849019369 minutes
+LR
+0.9866666666666667
+0.9866666666666667
+0.9466666666666667
+0.92
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.87 (+/- 0.10)
+Runtime: 0.001424694061279297 minutes
+RF
+accuracy: 1.00 (+/- 0.03)
+Runtime: 0.005300581455230713 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.03)
+Runtime: 0.01161102851231893 minutes
+Niave Bayes
+accuracy: 0.88 (+/- 0.16)
+Runtime: 0.0010888814926147462 minutes
+LR
+1.0
+0.9866666666666667
+0.9733333333333334
+0.8933333333333333
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.88 (+/- 0.11)
+Runtime: 0.0018269141515096028 minutes
+RF
+accuracy: 0.99 (+/- 0.03)
+Runtime: 0.0062851349512736 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.015871580441792807 minutes
+Niave Bayes
+accuracy: 0.90 (+/- 0.17)
+Runtime: 0.0017475605010986329 minutes
+LR
+0.96
+0.9733333333333334
+0.96
+0.9333333333333333
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.83 (+/- 0.12)
+Runtime: 0.001997093359629313 minutes
+RF
+accuracy: 0.99 (+/- 0.04)
+Runtime: 0.0059024572372436525 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.03)
+Runtime: 0.011981201171875 minutes
+Niave Bayes
+accuracy: 0.91 (+/- 0.09)
+Runtime: 0.0013001680374145508 minutes
+LR
+0.9866666666666667
+0.9866666666666667
+0.9733333333333334
+0.9066666666666666
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.88 (+/- 0.10)
+Runtime: 0.0013421972592671712 minutes
+RF
+accuracy: 1.00 (+/- 0.03)
+Runtime: 0.004574318726857503 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.03)
+Runtime: 0.009260257085164389 minutes
+Niave Bayes
+accuracy: 0.88 (+/- 0.16)
+Runtime: 0.0010250488917032878 minutes
+LR
+0.9866666666666667
+1.0
+0.9733333333333334
+0.88
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.84 (+/- 0.10)
+Runtime: 0.001358183224995931 minutes
+RF
+accuracy: 0.98 (+/- 0.04)
+Runtime: 0.004491933186848958 minutes
+Gradient Boosting
+accuracy: 0.97 (+/- 0.06)
+Runtime: 0.010438764095306396 minutes
+Niave Bayes
+accuracy: 0.95 (+/- 0.06)
+Runtime: 0.001063382625579834 minutes
+LR
+0.9866666666666667
+0.9733333333333334
+0.9733333333333334
+0.9066666666666666
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.88 (+/- 0.10)
+Runtime: 0.0016109903653462728 minutes
+RF
+accuracy: 1.00 (+/- 0.03)
+Runtime: 0.005938339233398438 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.01141964594523112 minutes
+Niave Bayes
+accuracy: 0.92 (+/- 0.11)
+Runtime: 0.0013130903244018555 minutes
+LR
+0.9733333333333334
+0.9866666666666667
+0.9733333333333334
+0.92
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.86 (+/- 0.12)
+Runtime: 0.0016440828641255698 minutes
+RF
+accuracy: 0.95 (+/- 0.08)
+Runtime: 0.004919910430908203 minutes
+Gradient Boosting
+accuracy: 0.98 (+/- 0.04)
+Runtime: 0.009677902857462565 minutes
+Niave Bayes
+accuracy: 0.98 (+/- 0.04)
+Runtime: 0.0011019349098205567 minutes
+LR
+0.9733333333333334
+0.9866666666666667
+0.96
+0.9333333333333333
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.88 (+/- 0.09)
+Runtime: 0.0019958853721618653 minutes
+RF
+accuracy: 1.00 (+/- 0.03)
+Runtime: 0.005920735994974772 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.012429734071095785 minutes
+Niave Bayes
+accuracy: 0.94 (+/- 0.09)
+Runtime: 0.0012964208920796712 minutes
+LR
+0.9866666666666667
+0.9866666666666667
+1.0
+0.92
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.85 (+/- 0.09)
+Runtime: 0.0014395435651143392 minutes
+RF
+accuracy: 0.99 (+/- 0.06)
+Runtime: 0.0051288604736328125 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.00979244311650594 minutes
+Niave Bayes
+accuracy: 0.92 (+/- 0.16)
+Runtime: 0.001014431317647298 minutes
+LR
+0.9733333333333334
+0.9866666666666667
+0.96
+0.92
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.87 (+/- 0.07)
+Runtime: 0.001371316115061442 minutes
+RF
+accuracy: 0.99 (+/- 0.05)
+Runtime: 0.004566280047098795 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.011259790261586506 minutes
+Niave Bayes
+accuracy: 0.97 (+/- 0.05)
+Runtime: 0.0013103127479553224 minutes
+LR
+0.9866666666666667
+0.9866666666666667
+0.9333333333333333
+0.9066666666666666
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.84 (+/- 0.14)
+Runtime: 0.0013538479804992675 minutes
+RF
+accuracy: 0.97 (+/- 0.04)
+Runtime: 0.005254185199737549 minutes
+Gradient Boosting
+accuracy: 0.98 (+/- 0.04)
+Runtime: 0.011061755816141765 minutes
+Niave Bayes
+accuracy: 0.93 (+/- 0.10)
+Runtime: 0.0011406977971394857 minutes
+LR
+0.9733333333333334
+0.9866666666666667
+0.92
+0.92
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.87 (+/- 0.10)
+Runtime: 0.002028520901997884 minutes
+RF
+accuracy: 1.00 (+/- 0.03)
+Runtime: 0.006098004182179769 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.011594545841217042 minutes
+Niave Bayes
+accuracy: 0.93 (+/- 0.06)
+Runtime: 0.0012523849805196126 minutes
+LR
+0.9733333333333334
+0.9733333333333334
+0.9333333333333333
+0.9066666666666666
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.85 (+/- 0.10)
+Runtime: 0.0014677802721659342 minutes
+RF
+accuracy: 0.99 (+/- 0.03)
+Runtime: 0.005344974994659424 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.010317750771840413 minutes
+Niave Bayes
+accuracy: 0.89 (+/- 0.18)
+Runtime: 0.0011195898056030273 minutes
+LR
+0.9866666666666667
+0.9866666666666667
+0.96
+0.96
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.83 (+/- 0.08)
+Runtime: 0.0022454619407653808 minutes
+RF
+accuracy: 1.00 (+/- 0.03)
+Runtime: 0.007283691565195719 minutes
+Gradient Boosting
+accuracy: 0.99 (+/- 0.03)
+Runtime: 0.012297836939493816 minutes
+Niave Bayes
+accuracy: 0.91 (+/- 0.11)
+Runtime: 0.0012647509574890137 minutes
+LR
+0.9866666666666667
+1.0
+0.9466666666666667
+0.8933333333333333
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.91 (+/- 0.09)
+Runtime: 0.0017746448516845702 minutes
+RF
+accuracy: 1.00 (+/- 0.03)
+Runtime: 0.00573660135269165 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.013248197237650554 minutes
+Niave Bayes
+accuracy: 0.92 (+/- 0.12)
+Runtime: 0.0018355051676432292 minutes
+LR
+0.9866666666666667
+0.9733333333333334
+0.9733333333333334
+0.88
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.88 (+/- 0.10)
+Runtime: 0.0019067843755086263 minutes
+RF
+accuracy: 0.97 (+/- 0.04)
+Runtime: 0.005986563364664714 minutes
+Gradient Boosting
+accuracy: 0.97 (+/- 0.04)
+Runtime: 0.013192482789357503 minutes
+Niave Bayes
+accuracy: 0.91 (+/- 0.12)
+Runtime: 0.001523768901824951 minutes
+LR
+0.9866666666666667
+0.9866666666666667
+0.9466666666666667
+0.9333333333333333
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.84 (+/- 0.14)
+Runtime: 0.0021206895510355634 minutes
+RF
+accuracy: 1.00 (+/- 0.03)
+Runtime: 0.004861617088317871 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.03)
+Runtime: 0.00990204413731893 minutes
+Niave Bayes
+accuracy: 0.90 (+/- 0.10)
+Runtime: 0.0010519703229268393 minutes
+LR
+0.9733333333333334
+0.9733333333333334
+0.9466666666666667
+0.9066666666666666
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.89 (+/- 0.09)
+Runtime: 0.0016731500625610351 minutes
+RF
+accuracy: 0.99 (+/- 0.03)
+Runtime: 0.0047897736231486 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.011844261487325033 minutes
+Niave Bayes
+accuracy: 0.95 (+/- 0.03)
+Runtime: 0.0010365804036458334 minutes
+LR
+0.9866666666666667
+0.9866666666666667
+0.9733333333333334
+0.9466666666666667
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.87 (+/- 0.07)
+Runtime: 0.001576685905456543 minutes
+RF
+accuracy: 0.99 (+/- 0.04)
+Runtime: 0.004958128929138184 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.010188241799672445 minutes
+Niave Bayes
+accuracy: 0.97 (+/- 0.06)
+Runtime: 0.001040502389272054 minutes
+LR
+0.9733333333333334
+0.9866666666666667
+1.0
+0.9066666666666666
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.86 (+/- 0.10)
+Runtime: 0.001844203472137451 minutes
+RF
+accuracy: 0.99 (+/- 0.03)
+Runtime: 0.006608327229817708 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.01203749974568685 minutes
+Niave Bayes
+accuracy: 0.91 (+/- 0.15)
+Runtime: 0.001484219233194987 minutes
+LR
+0.9733333333333334
+0.9733333333333334
+0.9866666666666667
+0.8933333333333333
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.88 (+/- 0.09)
+Runtime: 0.001433106263478597 minutes
+RF
+accuracy: 0.99 (+/- 0.04)
+Runtime: 0.005099376042683919 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.010249034563700358 minutes
+Niave Bayes
+accuracy: 0.91 (+/- 0.12)
+Runtime: 0.0010598500569661458 minutes
+LR
+0.9733333333333334
+0.9733333333333334
+0.9333333333333333
+0.88
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.84 (+/- 0.12)
+Runtime: 0.0016570806503295899 minutes
+RF
+accuracy: 1.00 (+/- 0.03)
+Runtime: 0.005658924579620361 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.011075862248738607 minutes
+Niave Bayes
+accuracy: 0.96 (+/- 0.07)
+Runtime: 0.001240698496500651 minutes
+LR
+0.9466666666666667
+0.9866666666666667
+0.92
+0.92
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.83 (+/- 0.13)
+Runtime: 0.0014427701632181804 minutes
+RF
+accuracy: 0.97 (+/- 0.08)
+Runtime: 0.004811422030131022 minutes
+Gradient Boosting
+accuracy: 0.97 (+/- 0.06)
+Runtime: 0.010645933945973714 minutes
+Niave Bayes
+accuracy: 0.94 (+/- 0.06)
+Runtime: 0.0011232217152913411 minutes
+LR
+0.9866666666666667
+0.9866666666666667
+0.96
+0.92
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.84 (+/- 0.08)
+Runtime: 0.0013475974400838217 minutes
+RF
+accuracy: 0.99 (+/- 0.04)
+Runtime: 0.004625085989634196 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.011440996328989666 minutes
+Niave Bayes
+accuracy: 0.94 (+/- 0.06)
+Runtime: 0.0011265277862548828 minutes
+LR
+0.9733333333333334
+0.9733333333333334
+0.96
+0.92
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.86 (+/- 0.09)
+Runtime: 0.001572708288828532 minutes
+RF
+accuracy: 0.98 (+/- 0.07)
+Runtime: 0.00553809404373169 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.009579916795094809 minutes
+Niave Bayes
+accuracy: 0.90 (+/- 0.22)
+Runtime: 0.0010185877482096354 minutes
+LR
+0.9866666666666667
+0.9866666666666667
+0.9866666666666667
+0.9466666666666667
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.87 (+/- 0.10)
+Runtime: 0.0015094916025797525 minutes
+RF
+accuracy: 1.00 (+/- 0.03)
+Runtime: 0.0046518286069234215 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.009734634558359783 minutes
+Niave Bayes
+accuracy: 0.97 (+/- 0.04)
+Runtime: 0.0011340498924255372 minutes
+LR
+0.9866666666666667
+0.9866666666666667
+0.9866666666666667
+0.92
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.86 (+/- 0.09)
+Runtime: 0.0015446225802103679 minutes
+RF
+accuracy: 0.96 (+/- 0.10)
+Runtime: 0.005485153198242188 minutes
+Gradient Boosting
+accuracy: 0.97 (+/- 0.05)
+Runtime: 0.013562528292338054 minutes
+Niave Bayes
+accuracy: 0.90 (+/- 0.16)
+Runtime: 0.0013682802518208822 minutes
+LR
+0.9866666666666667
+0.96
+0.9733333333333334
+0.9066666666666666
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.84 (+/- 0.11)
+Runtime: 0.0013588507970174154 minutes
+RF
+accuracy: 0.97 (+/- 0.07)
+Runtime: 0.004644644260406494 minutes
+Gradient Boosting
+accuracy: 0.98 (+/- 0.04)
+Runtime: 0.009210709730784099 minutes
+Niave Bayes
+accuracy: 0.95 (+/- 0.03)
+Runtime: 0.0010056773821512858 minutes
+LR
+0.9733333333333334
+0.9866666666666667
+0.9466666666666667
+0.88
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.84 (+/- 0.10)
+Runtime: 0.001358950138092041 minutes
+RF
+accuracy: 1.00 (+/- 0.03)
+Runtime: 0.004949140548706055 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.03)
+Runtime: 0.009476796785990397 minutes
+Niave Bayes
+accuracy: 0.94 (+/- 0.10)
+Runtime: 0.0012193600336710612 minutes
+LR
+0.9866666666666667
+0.9866666666666667
+0.9466666666666667
+0.8933333333333333
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.85 (+/- 0.14)
+Runtime: 0.0013170282046000162 minutes
+RF
+accuracy: 0.99 (+/- 0.05)
+Runtime: 0.004493347803751628 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.009472338358561198 minutes
+Niave Bayes
+accuracy: 0.89 (+/- 0.16)
+Runtime: 0.0010406851768493652 minutes
+LR
+0.9733333333333334
+0.9733333333333334
+0.9733333333333334
+0.9333333333333333
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.85 (+/- 0.10)
+Runtime: 0.0016357223192850748 minutes
+RF
+accuracy: 0.98 (+/- 0.06)
+Runtime: 0.005724088350931803 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.01331093708674113 minutes
+Niave Bayes
+accuracy: 0.90 (+/- 0.10)
+Runtime: 0.0011762579282124837 minutes
+LR
+0.9866666666666667
+0.9866666666666667
+0.9733333333333334
+0.9333333333333333
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.83 (+/- 0.08)
+Runtime: 0.0019322991371154784 minutes
+RF
+accuracy: 0.98 (+/- 0.06)
+Runtime: 0.005993938446044922 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.011652139822642009 minutes
+Niave Bayes
+accuracy: 0.90 (+/- 0.17)
+Runtime: 0.0013114054997762044 minutes
+LR
+0.9733333333333334
+0.9866666666666667
+0.9466666666666667
+0.92
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.86 (+/- 0.09)
+Runtime: 0.0014345804850260417 minutes
+RF
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.004812411467234294 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.010365708669026693 minutes
+Niave Bayes
+accuracy: 0.93 (+/- 0.11)
+Runtime: 0.0010335087776184083 minutes
+LR
+0.9733333333333334
+0.9866666666666667
+0.9733333333333334
+0.9466666666666667
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.85 (+/- 0.14)
+Runtime: 0.001534712314605713 minutes
+RF
+accuracy: 0.99 (+/- 0.04)
+Runtime: 0.0052183588345845544 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.03)
+Runtime: 0.009775332609812419 minutes
+Niave Bayes
+accuracy: 0.85 (+/- 0.22)
+Runtime: 0.0012161572774251302 minutes
+LR
+0.9866666666666667
+0.9866666666666667
+0.96
+0.88
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.85 (+/- 0.10)
+Runtime: 0.0017967939376831055 minutes
+RF
+accuracy: 0.99 (+/- 0.05)
+Runtime: 0.005230859915415446 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.011584722995758056 minutes
+Niave Bayes
+accuracy: 0.93 (+/- 0.09)
+Runtime: 0.0012842059135437013 minutes
+LR
+0.9733333333333334
+0.9866666666666667
+0.9866666666666667
+0.9333333333333333
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.87 (+/- 0.07)
+Runtime: 0.00146866242090861 minutes
+RF
+accuracy: 0.97 (+/- 0.04)
+Runtime: 0.005474126338958741 minutes
+Gradient Boosting
+accuracy: 0.98 (+/- 0.04)
+Runtime: 0.010088507334391277 minutes
+Niave Bayes
+accuracy: 0.90 (+/- 0.10)
+Runtime: 0.0014132301012674967 minutes
+LR
+0.9866666666666667
+0.9866666666666667
+0.9466666666666667
+0.92
+Saving to file  results.csv
+1
+2
+(75, 17156)
+Size:  (75, 91)
+3
+4
+5
+6
+KNN
+accuracy: 0.81 (+/- 0.17)
+Runtime: 0.0014857967694600423 minutes
+RF
+accuracy: 1.00 (+/- 0.03)
+Runtime: 0.004880678653717041 minutes
+Gradient Boosting
+accuracy: 1.00 (+/- 0.00)
+Runtime: 0.011283397674560547 minutes
+Niave Bayes
+accuracy: 0.96 (+/- 0.05)
+Runtime: 0.001147766908009847 minutes
+LR
+0.9866666666666667
+0.9866666666666667
+0.9733333333333334
+0.9066666666666666
+Saving to file  results.csv

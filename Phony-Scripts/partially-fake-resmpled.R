@@ -3,7 +3,6 @@
 # 2: Percent fake, how much of each sample to fake as an integer
 library(readr)
 library(tibble)
-library(ggplot2)
 
 make_partially_fake <- function(data,portion,filename){
   #remove the fake samples
@@ -26,7 +25,7 @@ make_partially_fake <- function(data,portion,filename){
   write_csv(data,filename)
 }
 
-#setwd('/Users/michael/Holden/')
+setwd('/Users/mibr6115/Holden/')
 inputdata <- read_csv('Data/Distribution-Data-Set/CNA-100/test_cna_distribution1.csv')
 i=0
 

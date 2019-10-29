@@ -36,18 +36,6 @@ def clean_data(df):
 # TODO write a function to down sample the number of features, default all, add a command line parameter for number
 #  of features to use
 
-# Takes training data, test data and n (number of feature to select). Randomly selected n features without replacement
-# subsets the original data frames with the randomly selected portions and returns them
-def stachastic_downsample(train, test, n=-1):
-    print(train.shape)
-    if n == -1:
-        # assuming incoming data is a np array
-        number_of_features = train.shape[1]
-    # choose n number from 0 - number of features in data. without replacement
-    cols = random.sample(range(train.shape[1]),n)
-    return train.iloc[:,cols], test.iloc[:,cols]
-
-
 # python Classification-Optimized-General-Use.py ../../Data/Imputation-Data-Set/CNA-imputation-train.csv ../../Data/Imputation-Data-Set/CNA-imputation-test.csv imputation-cna-results.csv imputation
 # ../../Data/Imputation-Data-Set/CNA-imputation-train.csv
 # '../../Data/Distribution-Data-Set/test_transcriptomics_distribution.csv'
@@ -70,8 +58,6 @@ labels_test = df_test['labels']
 # remove the labels column and re-add it
 df = df.drop('labels',axis=1)
 df_test = df_test.drop('labels',axis=1)
-
-df, df_test = stachastic_downsample(df,df_test,number_of_features)
 
 df['labels'] = labels
 df_test['labels'] = labels_test
