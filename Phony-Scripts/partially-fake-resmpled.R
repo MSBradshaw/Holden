@@ -27,7 +27,7 @@ make_partially_fake <- function(data,portion,filename){
 }
 
 #setwd('/Users/michael/Holden/')
-#inputdata <- read_csv('Data/Distribution-Data-Set/CNA-100/test_cna_distribution1.csv')
+inputdata <- read_csv('Data/Distribution-Data-Set/CNA-100/test_cna_distribution1.csv')
 i=0
 
 args <- commandArgs(trailingOnly = TRUE)
