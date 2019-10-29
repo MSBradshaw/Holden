@@ -37,13 +37,12 @@ def clean_data(df):
 # ../../Data/Imputation-Data-Set/CNA-imputation-train.csv
 # '../../Data/Distribution-Data-Set/test_transcriptomics_distribution.csv'
 df = pd.read_csv(
-    '/Users/mibr6115/Holden/Data/Distribution-Data-Set/CNA-100' + 'train_cna_distribution' + sys.argv[1] + '.csv')
+    '/Users/mibr6115/Holden/Data/Distribution-Data-Set/CNA-100/' + 'train_cna_distribution' + sys.argv[1] + '.csv')
 
 df_test = None
 for i in range(1,10,1):
-    df_test = pd.read_csv('/Users/mibr6115/Holden/Data/Partially-Fake-Resampled/CNA' + 'test_partially_resampled' + sys.argv[1] + '_fake_0.' + str(i) + '.csv')
-    # remove this, it is just for testing
-    continue
+    df_test = pd.read_csv('/Users/mibr6115/Holden/Data/Partially-Fake-Resampled/CNA/' + 'test_partially_resampled' + sys.argv[1] + '_fake_0.' + str(i) + '.csv')
+
     number_of_features = int(i)
 
     # df = pd.read_csv('../../Data/Imputation-Data-Set/cna-50/CNA-imputation-train-6.csv')
@@ -158,8 +157,8 @@ for i in range(1,10,1):
     learners = ['Random Forest', 'GBC', 'Naive Bayes', 'KNN']
     t = 'imputation'
     t = sys.argv[4]
-    number_of_features = '0.' + str(number_of_features) + '0'
-    numbers = [number_of_features, number_of_features, number_of_features, str(number_of_features)]
+    fakeness = '0.' + str(i) + '0'
+    numbers = [fakeness, fakeness, fakeness, fakeness]
     type = [t, t, t, t]
     final = pd.DataFrame({'score': results, 'learner': learners, 'type': type, 'fakeness': numbers})
     final.head()
