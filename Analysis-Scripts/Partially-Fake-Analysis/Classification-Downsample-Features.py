@@ -37,11 +37,12 @@ def clean_data(df):
 # ../../Data/Imputation-Data-Set/CNA-imputation-train.csv
 # '../../Data/Distribution-Data-Set/test_transcriptomics_distribution.csv'
 df = pd.read_csv(
-    '/Users/mibr6115/Holden/Data/Distribution-Data-Set/CNA-100' + 'train_cna_distribution' + sys.argv[1] + '.csv')
+    '/Users/mibr6115/Holden/Data/Distribution-Data-Set/CNA-100/' + 'train_cna_distribution' + sys.argv[1] + '.csv')
 
 df_test = None
 for i in range(1,10,1):
-    df_test = pd.read_csv('/Users/mibr6115/Holden/Data/Partially-Fake-Resampled/CNA' + 'test_partially_resampled' + sys.argv[1] + '_fake_0.' + str(i) + '.csv')
+    df_test = pd.read_csv('/Users/mibr6115/Holden/Data/Partially-Fake-Resampled/CNA/' + 'test_partially_resampled' + sys.argv[1] + '_fake_0.' + str(i) + '.csv')
+    print(i)
     # remove this, it is just for testing
     continue
     number_of_features = int(i)
