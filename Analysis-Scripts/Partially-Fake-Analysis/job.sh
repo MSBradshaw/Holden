@@ -1,4 +1,4 @@
-for i in {1..9}
+for i in {1..100}
 do
-	echo $i
+	sbatch single.sh $i
 done

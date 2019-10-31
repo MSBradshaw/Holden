@@ -42,11 +42,8 @@ df = pd.read_csv(
 df_test = None
 for i in range(1,10,1):
     df_test = pd.read_csv('/Users/mibr6115/Holden/Data/Partially-Fake-Resampled/CNA/' + 'test_partially_resampled' + sys.argv[1] + '_fake_0.' + str(i) + '.csv')
-    print(i)
-    # remove this, it is just for testing
-    continue
     number_of_features = int(i)
-
+    print('/Users/mibr6115/Holden/Data/Partially-Fake-Resampled/CNA/' + 'test_partially_resampled' + sys.argv[1] + '_fake_0.' + str(i) + '.csv')
     # df = pd.read_csv('../../Data/Imputation-Data-Set/cna-50/CNA-imputation-train-6.csv')
     # df_test = pd.read_csv('../../Data/Imputation-Data-Set/cna-50/CNA-imputaion-test-6.csv')
     print(1)
@@ -74,18 +71,18 @@ for i in range(1,10,1):
     first_df_test = dig.digit_preference_first_after_dec(df_test)
     second_df_test = dig.digit_preference_second_after_dec(df_test)
     print(5)
-    df = pd.merge(first_df, second_df, left_index=True, right_index=True)
-    df_test = pd.merge(first_df_test, second_df_test, left_index=True, right_index=True)
+    df2 = pd.merge(first_df, second_df, left_index=True, right_index=True)
+    df_test2 = pd.merge(first_df_test, second_df_test, left_index=True, right_index=True)
     print(6)
     NUM_SPLITS = 10  # number of train/test splits in cross validation
 
     # drop columns not intended for training
-    df = df.drop(['sample_id_x', 'sample_id_y', 'labels_x', 'labels_y'], axis=1)
-    df_test = df_test.drop(['sample_id_x', 'sample_id_y', 'labels_x', 'labels_y'], axis=1)
+    df2 = df2.drop(['sample_id_x', 'sample_id_y', 'labels_x', 'labels_y'], axis=1)
+    df_test2 = df_test2.drop(['sample_id_x', 'sample_id_y', 'labels_x', 'labels_y'], axis=1)
 
     print('KNN')
     start = time.time()
-    knn = cu.knn_model_crossval(df, labels, NUM_SPLITS)
+    knn = cu.knn_model_crossval(df2, labels, NUM_SPLITS)
     end = time.time()
     print("Runtime:", (end - start) / 60, "minutes")
 
@@ -97,19 +94,19 @@ for i in range(1,10,1):
 
     print('RF')
     start = time.time()
-    rf = cu.randomforest_model_crossval(df, labels, NUM_SPLITS)
+    rf = cu.randomforest_model_crossval(df2, labels, NUM_SPLITS)
     end = time.time()
     print("Runtime:", (end - start) / 60, "minutes")
 
     print('Gradient Boosting')
     start = time.time()
-    gbc = cu.gradient_boosting_crossval(df, labels, NUM_SPLITS)
+    gbc = cu.gradient_boosting_crossval(df2, labels, NUM_SPLITS)
     end = time.time()
     print("Runtime:", (end - start) / 60, "minutes")
 
     print('Niave Bayes')
     start = time.time()
-    gnb = cu.bayes_gaussian_model_crossval(df, labels, NUM_SPLITS)
+    gnb = cu.bayes_gaussian_model_crossval(df2, labels, NUM_SPLITS)
     end = time.time()
     print("Runtime:", (end - start) / 60, "minutes")
 
@@ -131,20 +128,20 @@ for i in range(1,10,1):
     # lr_pred = lr.predict(df_test)
     # lr_result = lr.score(df_test, labels_test)
 
-    rf_pred = rf.predict(df_test)
-    rf_result = rf.score(df_test, labels_test)
+    rf_pred = rf.predict(df_test2)
+    rf_result = rf.score(df_test2, labels_test)
 
     # svc_pred = svc.predict(df_test)
     # svc_result = svc.score(df_test, labels_test)
 
-    gbc_pred = gbc.predict(df_test)
-    gbc_result = gbc.score(df_test, labels_test)
+    gbc_pred = gbc.predict(df_test2)
+    gbc_result = gbc.score(df_test2, labels_test)
 
-    gnb_pred = gnb.predict(df_test)
-    gnb_result = gnb.score(df_test, labels_test)
+    gnb_pred = gnb.predict(df_test2)
+    gnb_result = gnb.score(df_test2, labels_test)
 
-    knn_pred = knn.predict(df_test)
-    knn_result = knn.score(df_test, labels_test)
+    knn_pred = knn.predict(df_test2)
+    knn_result = knn.score(df_test2, labels_test)
     #
     # mlp_pred = mlp.predict(df_test)
     # mlp_result = mlp.score(df_test, labels_test)
@@ -157,10 +154,9 @@ for i in range(1,10,1):
     # print(mlp_result)
     results = [rf_result, gbc_result, gnb_result, knn_result]
     learners = ['Random Forest', 'GBC', 'Naive Bayes', 'KNN']
-    t = 'imputation'
-    t = sys.argv[4]
-    number_of_features = '0.' + str(number_of_features) + '0'
-    numbers = [number_of_features, number_of_features, number_of_features, str(number_of_features)]
+    t = sys.argv[4] + str(i)
+    fakeness = '0.' + str(i) + '0'
+    numbers = [fakeness, fakeness, fakeness, fakeness]
     type = [t, t, t, t]
     final = pd.DataFrame({'score': results, 'learner': learners, 'type': type, 'fakeness': numbers})
     final.head()
