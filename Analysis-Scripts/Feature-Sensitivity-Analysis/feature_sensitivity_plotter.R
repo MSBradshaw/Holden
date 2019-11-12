@@ -50,15 +50,15 @@ knn$error <- errors
 d <- bind_rows(knn,nb,gb,rf)
 
 d$size = apply(d,1,function(row){
-  groups <- c(100,500,1000,2000,4000,6000,8000,10000,12000,14000,16000,17000)
+  groups <- c(10,20,30,40,50,60,70,80,90,100,500,1000,2000,4000,6000,8000,10000,12000,14000,16000,17000)
   i <- match(as.numeric(row[6]),groups)
   i
 })
-
-ggplot(data = d,aes(x=size,y=score,color=learner))  + geom_point() + 
+colnames(d) <- c("Group.1","X1","score","Learner","type","features","error","size")
+ggplot(data = d,aes(x=size,y=score,color=Learner))  + geom_point() + 
   geom_errorbar(aes(ymin=score-error, ymax=score+error),width=.2) + 
-  xlab('number of features') +
-  ylab('mean score from 100 replicates') + 
-  geom_line() + scale_x_continuous(breaks = 1:12,
-                                   labels = c('100','500','1000','2000','4000','6000','8000','10000','12000','14000','16000','17000'))
+  xlab('Number of Features') +
+  ylab('Mean Accuracy of 100 Replicates') + 
+  geom_line() + scale_x_continuous(breaks = 1:21,
+                                   labels = c('10','20','30','40','50','60','70','80','90','100','500','1000','2000','4000','6000','8000','10000','12000','14000','16000','17000'))
 ggsave('/Users/michael/Holden/Analysis-Scripts/Feature-Sensitivity-Analysis/featureDownsampling.png',units='in',width=11,height=8.5)
