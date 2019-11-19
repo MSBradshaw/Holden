@@ -56,8 +56,8 @@ d$size = apply(d,1,function(row){
 })
 colnames(d) <- c("Group.1","X1","score","Learner","type","features","error","size")
 ggplot(data = d,aes(x=size,y=score,color=Learner))  + geom_point() + 
-  geom_errorbar(aes(ymin=score-error, ymax=score+error),width=.2) + 
-  xlab('Number of Features') +
+  geom_errorbar(aes(ymin=score-error, ymax=score+error),width=.4) + 
+  xlab('Number of Measurements') +
   ylab('Mean Accuracy of 100 Replicates') + 
   geom_line() + scale_x_continuous(breaks = 1:21,
                                    labels = c('10','20','30','40','50','60','70','80','90','100','500','1000','2000','4000','6000','8000','10000','12000','14000','16000','17000'))
