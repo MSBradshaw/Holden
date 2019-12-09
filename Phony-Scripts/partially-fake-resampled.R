@@ -3,14 +3,15 @@
 # 2: Percent fake, how much of each sample to fake as an integer
 library(readr)
 library(tibble)
+args = commandArgs(trailingOnly=TRUE)
 
 make_partially_fake <- function(data,portion,filename){
   #remove the fake samples
   data <- data[data$labels != 'phony',]
   
   #randomly pick half the samples
-  fake_ids <- sample(1:nrow(data),floor(nrow(data)/2),replace = FALSE)
-  real_ids <- c(1:75)[!(c(1:75) %in% fake_ids)]
+  fake_ids <- sample(1:nrow(data),floor(nrow(data) * portion),replace = FALSE)
+  real_ids <- c(1:nrow(data))[!(c(1:nrow(data)) %in% fake_ids)]
   for( i in fake_ids){
     #selected a number of ids based of the portion of data to be made fake
     selected_ids <- sample(1,ncol(data),floor(ncol(data)*portion))
@@ -25,8 +26,9 @@ make_partially_fake <- function(data,portion,filename){
   write_csv(data,filename)
 }
 
-setwd('/Users/mibr6115/Holden/')
-inputdata <- read_csv('Data/Distribution-Data-Set/CNA-100/test_cna_distribution1.csv')
+#setwd('/Users/mibr6115/Holden/')
+setwd('/Users/michael/Holden/')
+inputdata <- read_csv(paste('Data/Distribution-Data-Set/CNA-100/test_cna_distribution',args[1],'.csv',sep=''))
 i=0
 
 args <- commandArgs(trailingOnly = TRUE)
