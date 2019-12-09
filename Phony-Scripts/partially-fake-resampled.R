@@ -36,11 +36,10 @@ print('args')
 print(args)
 num <- as.numeric(args[1])
 percent_fake = as.numeric(args[2])/100
-for(i in c(num:(num+10))){
-  print(i)
-  test_name <- paste('Data/Partially-Fake-Resampled/CNA/test_partially_resampled',i,'_fake_',percent_fake,'.csv',sep='')
-  make_partially_fake(inputdata,percent_fake,test_name)
-}
+print(num)
+test_name <- paste('Data/Partially-Fake-Resampled/CNA/test_partially_resampled',num,'_fake_',percent_fake,'.csv',sep='')
+make_partially_fake(inputdata,percent_fake,test_name)
+
 # these files being created as test sets will be created using originl CNA Resampled Test Data, 
 # this way they can be train on an already existing training file of all fake data
 
